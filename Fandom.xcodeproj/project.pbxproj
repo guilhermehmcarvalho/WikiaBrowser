@@ -28,7 +28,6 @@
 		7941FD0720C94CCB004C95BE /* WikiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD0620C94CCB004C95BE /* WikiService.swift */; };
 		7941FD0920C94E3D004C95BE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD0820C94E3D004C95BE /* Service.swift */; };
 		7941FD0C20C94F3A004C95BE /* WikiaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD0B20C94F3A004C95BE /* WikiaItem.swift */; };
-		7941FD0E20C95197004C95BE /* ExpandedWikiaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD0D20C95197004C95BE /* ExpandedWikiaItem.swift */; };
 		7941FD1420C966F0004C95BE /* WikiApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD1320C966F0004C95BE /* WikiApiService.swift */; };
 		7941FD1620C96DA3004C95BE /* RootResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD1520C96DA3004C95BE /* RootResponse.swift */; };
 		7941FD1820C978FA004C95BE /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD1720C978FA004C95BE /* CodingUserInfoKey.swift */; };
@@ -84,7 +83,6 @@
 		7941FD0620C94CCB004C95BE /* WikiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiService.swift; sourceTree = "<group>"; };
 		7941FD0820C94E3D004C95BE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		7941FD0B20C94F3A004C95BE /* WikiaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaItem.swift; sourceTree = "<group>"; };
-		7941FD0D20C95197004C95BE /* ExpandedWikiaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedWikiaItem.swift; sourceTree = "<group>"; };
 		7941FD1320C966F0004C95BE /* WikiApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiApiService.swift; sourceTree = "<group>"; };
 		7941FD1520C96DA3004C95BE /* RootResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootResponse.swift; sourceTree = "<group>"; };
 		7941FD1720C978FA004C95BE /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
@@ -288,7 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				7941FD0B20C94F3A004C95BE /* WikiaItem.swift */,
-				7941FD0D20C95197004C95BE /* ExpandedWikiaItem.swift */,
 				7941FD1520C96DA3004C95BE /* RootResponse.swift */,
 			);
 			path = Models;
@@ -548,7 +545,6 @@
 				7941FD0720C94CCB004C95BE /* WikiService.swift in Sources */,
 				7941FD1620C96DA3004C95BE /* RootResponse.swift in Sources */,
 				7941FD0520C942B4004C95BE /* APIService.swift in Sources */,
-				7941FD0E20C95197004C95BE /* ExpandedWikiaItem.swift in Sources */,
 				7941FD0320C9426F004C95BE /* Bundle.swift in Sources */,
 				7941FD0020C941ED004C95BE /* APIRouter.swift in Sources */,
 				7941FD0920C94E3D004C95BE /* Service.swift in Sources */,

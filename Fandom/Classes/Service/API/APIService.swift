@@ -15,14 +15,14 @@ class ApiService {
     
     let sessionManager: SessionManager = {
         let conf = URLSessionConfiguration.default
-        conf.timeoutIntervalForRequest = Params.timeout
-        conf.timeoutIntervalForResource = Params.timeout
+        conf.timeoutIntervalForRequest = ApiServiceParams.timeout
+        conf.timeoutIntervalForResource = ApiServiceParams.timeout
         return SessionManager(configuration: conf)
     }()
     
     // MARK: - Other
     
-    struct Params {
+    struct ApiServiceParams {
         static let baseUrl = URL(string: Bundle.main.apiBaseUrl())!
         static let timeout: Double = 15
     }

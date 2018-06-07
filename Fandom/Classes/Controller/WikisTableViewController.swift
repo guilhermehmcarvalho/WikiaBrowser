@@ -52,6 +52,7 @@ class WikisTableViewController: UITableViewController, WikiServiceDelegate {
     
     func requestDidComplete(_ items: [WikiaItem]) {
         self.wikiItems = items
+        print(items)
         self.tableView.reloadData()
     }
     

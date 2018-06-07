@@ -32,14 +32,14 @@ enum APIRouter: URLRequestConvertible {
     // MARK: - URLRequestConvertible
     
     func asURLRequest() throws -> URLRequest {
-        var urlRequest = URLRequest(url: ApiService.Params.baseUrl.appendingPathComponent(path))
+        var urlRequest = URLRequest(url: ApiService.ApiServiceParams.baseUrl.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
         
         // Parameters
         switch self {
         case .wikis(let params):
             do {
-                urlRequest = try URLEncoding.default.encode(urlRequest, with: params)
+                urlRequest = try URLEncoding.queryString.encode(urlRequest, with: params)
             } catch {
                 throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
             }
