@@ -20,6 +20,15 @@
 		7941FCF620C93B81004C95BE /* WikisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCF520C93B81004C95BE /* WikisTableViewController.swift */; };
 		7941FCFB20C93E0A004C95BE /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941FCF920C93E0A004C95BE /* Rubik-Regular.ttf */; };
 		7941FCFC20C93E0A004C95BE /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7941FCFA20C93E0A004C95BE /* Rubik-Medium.ttf */; };
+		7941FD0020C941ED004C95BE /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCFF20C941ED004C95BE /* APIRouter.swift */; };
+		7941FD0320C9426F004C95BE /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD0220C9426F004C95BE /* Bundle.swift */; };
+		7941FD0520C942B4004C95BE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD0420C942B4004C95BE /* APIService.swift */; };
+		7941FD0720C94CCB004C95BE /* WikiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD0620C94CCB004C95BE /* WikiService.swift */; };
+		7941FD0920C94E3D004C95BE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD0820C94E3D004C95BE /* Service.swift */; };
+		7941FD0C20C94F3A004C95BE /* WikiaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD0B20C94F3A004C95BE /* WikiaItem.swift */; };
+		7941FD0E20C95197004C95BE /* ExpandedWikiaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD0D20C95197004C95BE /* ExpandedWikiaItem.swift */; };
+		7941FD1420C966F0004C95BE /* WikiApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD1320C966F0004C95BE /* WikiApiService.swift */; };
+		7941FD1620C96DA3004C95BE /* RootResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD1520C96DA3004C95BE /* RootResponse.swift */; };
 		A680C0668770DBECF5F40BAB /* Pods_Fandom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4365C4537ECDA2842507448 /* Pods_Fandom.framework */; };
 		BC9351A2A4DD4490B53C1250 /* Pods_FandomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03BF1508D437C2C68EBE675 /* Pods_FandomUITests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +73,15 @@
 		7941FCF520C93B81004C95BE /* WikisTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikisTableViewController.swift; sourceTree = "<group>"; };
 		7941FCF920C93E0A004C95BE /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		7941FCFA20C93E0A004C95BE /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		7941FCFF20C941ED004C95BE /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		7941FD0220C9426F004C95BE /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		7941FD0420C942B4004C95BE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		7941FD0620C94CCB004C95BE /* WikiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiService.swift; sourceTree = "<group>"; };
+		7941FD0820C94E3D004C95BE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7941FD0B20C94F3A004C95BE /* WikiaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaItem.swift; sourceTree = "<group>"; };
+		7941FD0D20C95197004C95BE /* ExpandedWikiaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedWikiaItem.swift; sourceTree = "<group>"; };
+		7941FD1320C966F0004C95BE /* WikiApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiApiService.swift; sourceTree = "<group>"; };
+		7941FD1520C96DA3004C95BE /* RootResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootResponse.swift; sourceTree = "<group>"; };
 		8821AA5F66B2CE2AE1868598 /* Pods-FandomUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FandomUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FandomUITests/Pods-FandomUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4365C4537ECDA2842507448 /* Pods_Fandom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fandom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03BF1508D437C2C68EBE675 /* Pods_FandomUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FandomUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +186,9 @@
 		7941FCEB20C923FC004C95BE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7941FD0A20C94F2F004C95BE /* Models */,
+				7941FD0120C9424F004C95BE /* Helpers */,
+				7941FCFD20C941D4004C95BE /* Service */,
 				7941FCF420C93B67004C95BE /* Controller */,
 				7941FCBA20C919CF004C95BE /* AppDelegate.swift */,
 			);
@@ -224,6 +245,44 @@
 				7941FCF920C93E0A004C95BE /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7941FCFD20C941D4004C95BE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7941FCFE20C941DD004C95BE /* API */,
+				7941FD0620C94CCB004C95BE /* WikiService.swift */,
+				7941FD0820C94E3D004C95BE /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7941FCFE20C941DD004C95BE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7941FCFF20C941ED004C95BE /* APIRouter.swift */,
+				7941FD0420C942B4004C95BE /* APIService.swift */,
+				7941FD1320C966F0004C95BE /* WikiApiService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		7941FD0120C9424F004C95BE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7941FD0220C9426F004C95BE /* Bundle.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7941FD0A20C94F2F004C95BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7941FD0B20C94F3A004C95BE /* WikiaItem.swift */,
+				7941FD0D20C95197004C95BE /* ExpandedWikiaItem.swift */,
+				7941FD1520C96DA3004C95BE /* RootResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C8B5DECCF6021FF98E40E077 /* Frameworks */ = {
@@ -467,8 +526,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7941FCC320C919CF004C95BE /* Fandom.xcdatamodeld in Sources */,
+				7941FD0C20C94F3A004C95BE /* WikiaItem.swift in Sources */,
+				7941FD0720C94CCB004C95BE /* WikiService.swift in Sources */,
+				7941FD1620C96DA3004C95BE /* RootResponse.swift in Sources */,
+				7941FD0520C942B4004C95BE /* APIService.swift in Sources */,
+				7941FD0E20C95197004C95BE /* ExpandedWikiaItem.swift in Sources */,
+				7941FD0320C9426F004C95BE /* Bundle.swift in Sources */,
+				7941FD0020C941ED004C95BE /* APIRouter.swift in Sources */,
+				7941FD0920C94E3D004C95BE /* Service.swift in Sources */,
 				7941FCF220C925E3004C95BE /* WikiTableViewCell.swift in Sources */,
 				7941FCBB20C919CF004C95BE /* AppDelegate.swift in Sources */,
+				7941FD1420C966F0004C95BE /* WikiApiService.swift in Sources */,
 				7941FCF620C93B81004C95BE /* WikisTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +645,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				OBJECT_CONTEXT_KEY = managedObjectContextDebug;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -631,6 +700,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OBJECT_CONTEXT_KEY = managedObjectContextRelease;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -762,6 +832,129 @@
 			};
 			name = Release;
 		};
+		7941FD0F20C95DA5004C95BE /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OBJECT_CONTEXT_KEY = managedObjectContextTest;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Test;
+		};
+		7941FD1020C95DA5004C95BE /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 191E87482B4A9C3E76A08AC3 /* Pods-Fandom.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XQLTE359NY;
+				INFOPLIST_FILE = Fandom/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wikia.Fandom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Test;
+		};
+		7941FD1120C95DA5004C95BE /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 341FA93E20B05D147F7B4B03 /* Pods-FandomTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XQLTE359NY;
+				INFOPLIST_FILE = FandomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wikia.FandomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fandom.app/Fandom";
+			};
+			name = Test;
+		};
+		7941FD1220C95DA5004C95BE /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8821AA5F66B2CE2AE1868598 /* Pods-FandomUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XQLTE359NY;
+				INFOPLIST_FILE = FandomUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wikia.FandomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Fandom;
+			};
+			name = Test;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -769,6 +962,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7941FCE020C919D9004C95BE /* Debug */,
+				7941FD0F20C95DA5004C95BE /* Test */,
 				7941FCE120C919D9004C95BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -778,6 +972,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7941FCE320C919D9004C95BE /* Debug */,
+				7941FD1020C95DA5004C95BE /* Test */,
 				7941FCE420C919D9004C95BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -787,6 +982,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7941FCE620C919D9004C95BE /* Debug */,
+				7941FD1120C95DA5004C95BE /* Test */,
 				7941FCE720C919D9004C95BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -796,6 +992,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7941FCE920C919D9004C95BE /* Debug */,
+				7941FD1220C95DA5004C95BE /* Test */,
 				7941FCEA20C919D9004C95BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

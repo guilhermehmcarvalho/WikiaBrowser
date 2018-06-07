@@ -10,9 +10,12 @@ import UIKit
 
 class WikisTableViewController: UITableViewController {
 
+    let service = WikiService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        service.getTopWikis()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
