@@ -9,7 +9,12 @@
 import UIKit
 
 class WikiTableViewCell: UITableViewCell {
+    
+    static let reuseIdentifier = "WikiCell"
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

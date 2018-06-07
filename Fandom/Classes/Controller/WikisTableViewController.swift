@@ -8,19 +8,18 @@
 
 import UIKit
 
-class WikisTableViewController: UITableViewController {
-
+class WikisTableViewController: UITableViewController, WikiServiceDelegate {
+    
     let service = WikiService()
+    var wikiItems: [WikiaItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.register(UINib(nibName: "WikiTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: WikiTableViewCell.reuseIdentifier)
+        service.delegate = self
         service.getTopWikis()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,23 +31,34 @@ class WikisTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return wikiItems.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: WikiTableViewCell.reuseIdentifier,
+                                                       for: indexPath) as? WikiTableViewCell else {
+                fatalError("Unexpected Index Path")
+        }
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    func requestDidComplete(_ items: [WikiaItem]) {
+        self.wikiItems = items
+        self.tableView.reloadData()
+    }
+    
+    func requestDidComplete(cachedItems: [WikiaItem], failure: ServiceFailureType) {
+        self.wikiItems = cachedItems
+        self.tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.

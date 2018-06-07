@@ -48,23 +48,4 @@ class Service<T: Decodable>: NSObject {
             return nil
         }
     }
-    
-    /*func jsonDecodeArray(_ data: Data) -> [T]? {
-        do {
-            let decodedObjects = try JSONDecoder().decode([T].self, from: data)
-            try backgroundContext.save()
-            return decodedObjects
-        } catch let error {
-            print("Error @ Service/jsonDecodeArray: \(error)")
-            return nil
-        }
-    }*/
-    
-}
-
-// MARK: - Others
-
-enum ServiceFailureType {
-    case connection
-    case server
 }

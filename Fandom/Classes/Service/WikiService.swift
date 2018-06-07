@@ -10,22 +10,44 @@ import Foundation
 
 class WikiService: Service<RootResponse> {
     
-    private let apiService = WikiApiService()
+    // MARK: - Variables
+    
+    fileprivate let apiService = WikiApiService()
+    weak public var delegate: WikiServiceDelegate?
+    fileprivate let storeManager = WikiStoreManager()
+    
+    // MARK: - Public
     
     func getTopWikis() {
         apiService.get(failure: self.failure, success: self.success)
     }
     
+    // MARK: - Private
+    
     private func success(data: Data) {
+        storeManager.clearStorage()
         DispatchQueue.main.async {
-            let items = self.jsonDecode(data)
-            print(items)
+            guard let response = self.jsonDecode(data) else {
+                print("Error decoding RootResponse")
+                self.failure(ServiceFailureType.encoding)
+                return
+            }
+            self.delegate?.requestDidComplete(response.items)
         }
     }
     
     private func failure(_ failure: ServiceFailureType) {
         DispatchQueue.main.async {
             print(failure)
+            let items = self.storeManager.fetchAll()
+            self.delegate?.requestDidComplete(cachedItems: items, failure: failure)
         }
     }
+}
+
+// MARK: - Delegate Protocol
+
+protocol WikiServiceDelegate: class {
+    func requestDidComplete(_ items: [WikiaItem])
+    func requestDidComplete(cachedItems: [WikiaItem], failure: ServiceFailureType)
 }
