@@ -13,9 +13,4 @@ extension Bundle {
     func apiBaseUrl() -> String {
         return object(forInfoDictionaryKey: "ApiBaseUrl") as? String ?? ""
     }
-    
-    func managedObjectContext() -> CodingUserInfoKey? {
-        let key = object(forInfoDictionaryKey: "ManagedObjectContextKey") as? String ?? ""
-        return CodingUserInfoKey(rawValue: key)
-    }
 }

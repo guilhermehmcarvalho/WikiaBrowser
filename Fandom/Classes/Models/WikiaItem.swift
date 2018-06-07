@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(WikiaItem)
 class WikiaItem: NSManagedObject, Codable {
     
     // MARK: - Variables
@@ -17,8 +18,8 @@ class WikiaItem: NSManagedObject, Codable {
     @NSManaged var name: String
     @NSManaged var domain: String
     @NSManaged var language: String
-    @NSManaged var hub: String
-    @NSManaged var topic: String
+    @NSManaged var hub: String?
+    @NSManaged var topic: String?
     
     private enum CodingKeys: String, CodingKey { case id, name, domain, language, hub, topic }
     
@@ -40,8 +41,8 @@ class WikiaItem: NSManagedObject, Codable {
         name = try container.decode(String.self, forKey: .name)
         domain = try container.decode(String.self, forKey: .domain)
         language = try container.decode(String.self, forKey: .language)
-        hub = try container.decode(String.self, forKey: .hub)
-        topic = try container.decode(String.self, forKey: .topic)
+        hub = try container.decodeIfPresent(String.self, forKey: .hub)
+        topic = try container.decodeIfPresent(String.self, forKey: .topic)
     }
     
     // MARK: - Encodable
@@ -55,9 +56,4 @@ class WikiaItem: NSManagedObject, Codable {
         try container.encode(hub, forKey: .hub)
         try container.encode(topic, forKey: .topic)
     }
-}
-
-public extension CodingUserInfoKey {
-    // Helper property to retrieve the context
-    static let managedObjectContext = CodingUserInfoKey(rawValue: "managedObjectContext")
 }

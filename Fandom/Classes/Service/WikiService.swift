@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WikiService: Service<WikiaItem> {
+class WikiService: Service<RootResponse> {
     
     private let apiService = WikiApiService()
     
@@ -18,7 +18,7 @@ class WikiService: Service<WikiaItem> {
     
     private func success(data: Data) {
         DispatchQueue.main.async {
-            let items = self.jsonDecodeArray(data)
+            let items = self.jsonDecode(data)
             print(items)
         }
     }

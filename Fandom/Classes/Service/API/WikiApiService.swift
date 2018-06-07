@@ -40,17 +40,6 @@ class WikiApiService: ApiService {
                 return
             }
                 
-                if let result = response.result.value {
-                    if let JSON = result as? NSDictionary {
-                        print(JSON)
-                    }
-                }
-                
-                do {
-                    let rootResponse = try JSONDecoder().decode(RootResponse.self, from: data)
-                    print(rootResponse)
-                } catch let error { print("Error parsing root response: \(error)") }
-                
             success(data)
         }
     }

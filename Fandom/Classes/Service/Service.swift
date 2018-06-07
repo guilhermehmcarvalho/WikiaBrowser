@@ -34,7 +34,13 @@ class Service<T: Decodable>: NSObject {
     
     func jsonDecode(_ data: Data) -> T? {
         do {
-            let decodedObject = try JSONDecoder().decode(T.self, from: data)
+            guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
+                fatalError("Failed to retrieve context")
+            }
+            
+            let decoder = JSONDecoder()
+            decoder.userInfo[codingUserInfoKeyManagedObjectContext] = backgroundContext
+            let decodedObject = try decoder.decode(T.self, from: data)
             try backgroundContext.save()
             return decodedObject
         } catch let error {
@@ -43,7 +49,7 @@ class Service<T: Decodable>: NSObject {
         }
     }
     
-    func jsonDecodeArray(_ data: Data) -> [T]? {
+    /*func jsonDecodeArray(_ data: Data) -> [T]? {
         do {
             let decodedObjects = try JSONDecoder().decode([T].self, from: data)
             try backgroundContext.save()
@@ -52,7 +58,7 @@ class Service<T: Decodable>: NSObject {
             print("Error @ Service/jsonDecodeArray: \(error)")
             return nil
         }
-    }
+    }*/
     
 }
 
