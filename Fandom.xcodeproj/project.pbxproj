@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7941FCBB20C919CF004C95BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCBA20C919CF004C95BE /* AppDelegate.swift */; };
-		7941FCBD20C919CF004C95BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCBC20C919CF004C95BE /* ViewController.swift */; };
 		7941FCC020C919CF004C95BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7941FCBE20C919CF004C95BE /* Main.storyboard */; };
 		7941FCC320C919CF004C95BE /* Fandom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCC120C919CF004C95BE /* Fandom.xcdatamodeld */; };
 		7941FCC520C919D9004C95BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7941FCC420C919D9004C95BE /* Assets.xcassets */; };
 		7941FCC820C919D9004C95BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7941FCC620C919D9004C95BE /* LaunchScreen.storyboard */; };
 		7941FCD320C919D9004C95BE /* FandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCD220C919D9004C95BE /* FandomTests.swift */; };
 		7941FCDE20C919D9004C95BE /* FandomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCDD20C919D9004C95BE /* FandomUITests.swift */; };
+		7941FCF220C925E3004C95BE /* WikiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCF020C925E3004C95BE /* WikiTableViewCell.swift */; };
+		7941FCF320C925E3004C95BE /* WikiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7941FCF120C925E3004C95BE /* WikiTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		7941FCB720C919CF004C95BE /* Fandom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fandom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7941FCBA20C919CF004C95BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7941FCBC20C919CF004C95BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7941FCBF20C919CF004C95BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7941FCC220C919CF004C95BE /* Fandom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fandom.xcdatamodel; sourceTree = "<group>"; };
 		7941FCC420C919D9004C95BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		7941FCD920C919D9004C95BE /* FandomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FandomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7941FCDD20C919D9004C95BE /* FandomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomUITests.swift; sourceTree = "<group>"; };
 		7941FCDF20C919D9004C95BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7941FCF020C925E3004C95BE /* WikiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiTableViewCell.swift; sourceTree = "<group>"; };
+		7941FCF120C925E3004C95BE /* WikiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WikiTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,11 @@
 		7941FCB920C919CF004C95BE /* Fandom */ = {
 			isa = PBXGroup;
 			children = (
-				7941FCBA20C919CF004C95BE /* AppDelegate.swift */,
-				7941FCBC20C919CF004C95BE /* ViewController.swift */,
-				7941FCBE20C919CF004C95BE /* Main.storyboard */,
 				7941FCC420C919D9004C95BE /* Assets.xcassets */,
-				7941FCC620C919D9004C95BE /* LaunchScreen.storyboard */,
-				7941FCC920C919D9004C95BE /* Info.plist */,
-				7941FCC120C919CF004C95BE /* Fandom.xcdatamodeld */,
+				7941FCEB20C923FC004C95BE /* Classes */,
+				7941FCEC20C9240D004C95BE /* Resources */,
+				7941FCED20C92412004C95BE /* SupportingFiles */,
+				7941FCEE20C9241D004C95BE /* View */,
 			);
 			path = Fandom;
 			sourceTree = "<group>";
@@ -126,6 +126,49 @@
 				7941FCDF20C919D9004C95BE /* Info.plist */,
 			);
 			path = FandomUITests;
+			sourceTree = "<group>";
+		};
+		7941FCEB20C923FC004C95BE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7941FCBA20C919CF004C95BE /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7941FCEC20C9240D004C95BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7941FCC120C919CF004C95BE /* Fandom.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7941FCED20C92412004C95BE /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7941FCC920C919D9004C95BE /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		7941FCEE20C9241D004C95BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7941FCEF20C925A2004C95BE /* Cells */,
+				7941FCBE20C919CF004C95BE /* Main.storyboard */,
+				7941FCC620C919D9004C95BE /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7941FCEF20C925A2004C95BE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7941FCF020C925E3004C95BE /* WikiTableViewCell.swift */,
+				7941FCF120C925E3004C95BE /* WikiTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7941FCC820C919D9004C95BE /* LaunchScreen.storyboard in Resources */,
+				7941FCF320C925E3004C95BE /* WikiTableViewCell.xib in Resources */,
 				7941FCC520C919D9004C95BE /* Assets.xcassets in Resources */,
 				7941FCC020C919CF004C95BE /* Main.storyboard in Resources */,
 			);
@@ -259,8 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7941FCBD20C919CF004C95BE /* ViewController.swift in Sources */,
 				7941FCC320C919CF004C95BE /* Fandom.xcdatamodeld in Sources */,
+				7941FCF220C925E3004C95BE /* WikiTableViewCell.swift in Sources */,
 				7941FCBB20C919CF004C95BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
