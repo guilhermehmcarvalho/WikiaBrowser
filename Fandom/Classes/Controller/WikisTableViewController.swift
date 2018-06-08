@@ -15,7 +15,10 @@ class WikisTableViewController: UITableViewController {
     fileprivate let service = WikiService()
     fileprivate var wikiItems: [WikiaItem] = []
     fileprivate var page = 0
+    // Flag if there is a pending request
     fileprivate var isLoading = false
+    // Flag if current items on display are already from cached data
+    fileprivate var cached = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,15 +118,19 @@ extension WikisTableViewController: WikiServiceDelegate {
         
         page += 1
         isLoading = false
+        cached = false
         refreshControl?.endRefreshing()
         self.tableView.reloadData()
     }
     
     func requestDidComplete(cachedItems: [WikiaItem], failure: ServiceFailureType) {
         print("requestDidComplete fail \(failure)")
-        self.wikiItems = cachedItems
-        self.tableView.reloadData()
+        if !cached {
+            self.wikiItems = cachedItems
+            self.tableView.reloadData()
+        }
         refreshControl?.endRefreshing()
         isLoading = false
+        cached = true
     }
 }
