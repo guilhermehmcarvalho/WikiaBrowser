@@ -48,12 +48,15 @@ class WikiStoreManager: NSObject {
         }
     }
     
+    // Fetch all Items sorted by date
     func fetchAll() -> [WikiaItem] {
         var results = [WikiaItem]()
         
         guard let request: NSFetchRequest<WikiaItem> = WikiaItem.fetchRequest() as? NSFetchRequest<WikiaItem>
             else { fatalError("Unable to fetch WikiaItem") }
         do {
+            let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: true)
+            request.sortDescriptors = [sortDescriptor]
             results = try backgroundContext.fetch(request)
         } catch let error { print("Error fetching WikiaItem: \(error)") }
         

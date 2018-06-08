@@ -24,7 +24,8 @@ class WikiaStats: NSManagedObject, Codable {
     @NSManaged var images: Int
     @NSManaged var discussions: Int
     
-    private enum CodingKeys: String, CodingKey { case users, articles, pages, admins, activeUsers, edits, videos, images, discussions
+    private enum CodingKeys: String, CodingKey { case users, articles, pages, admins, activeUsers,
+        edits, videos, images, discussions
     }
     
     public static let entityName = "WikiaStats"
@@ -36,7 +37,8 @@ class WikiaStats: NSManagedObject, Codable {
         guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext,
             let managedObjectContext = decoder.userInfo[codingUserInfoKeyManagedObjectContext]
                 as? NSManagedObjectContext,
-            let entity = NSEntityDescription.entity(forEntityName: WikiaStats.entityName, in: managedObjectContext) else {
+            let entity = NSEntityDescription.entity(forEntityName: WikiaStats.entityName, in: managedObjectContext)
+            else {
                 fatalError("Failed to decode WikiaStats")
         }
         

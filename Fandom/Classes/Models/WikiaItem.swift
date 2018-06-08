@@ -30,6 +30,9 @@ class WikiaItem: NSManagedObject, Codable {
     @NSManaged var title: String
     @NSManaged var stats: WikiaStats?
     
+    // Others
+    @NSManaged var timestamp: Date?
+    
     private enum CodingKeys: String, CodingKey { case id, name, domain, language, hub, topic, headline, desc, image, url, title, stats
     }
     
@@ -65,6 +68,9 @@ class WikiaItem: NSManagedObject, Codable {
         url = try container.decodeIfPresent(String.self, forKey: .url)
         title = try container.decode(String.self, forKey: .title)
         stats = try container.decodeIfPresent(WikiaStats.self, forKey: .stats)
+        
+        // Others
+        timestamp = Date()
     }
     
     // MARK: - Encodable
