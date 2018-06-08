@@ -15,19 +15,24 @@ class WikiService: Service<RootResponse> {
     weak public var delegate: WikiServiceDelegate?
     fileprivate let storeManager = WikiStoreManager()
     fileprivate var apiService: WikiApiService!
+    fileprivate var shouldClearStorage = false
     
     // MARK: - Public
     
     func getTopWikis(page: Int? = nil) {
         apiService = WikiApiService().expand(1).batch(page).limit(30)
         apiService.get(failure: self.failure, success: self.success)
+        shouldClearStorage = page == nil
     }
     
     // MARK: - Private
     
     private func success(data: Data) {
         DispatchQueue.main.async {
-            self.storeManager.clearStorage()
+            if self.shouldClearStorage {
+                self.storeManager.clearStorage()
+            }
+            
             guard let response = self.jsonDecode(data) else {
                 print("Error decoding RootResponse")
                 self.failure(ServiceFailureType.encoding)
