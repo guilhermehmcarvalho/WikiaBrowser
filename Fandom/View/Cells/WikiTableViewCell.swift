@@ -18,6 +18,8 @@ class WikiTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var shadowView: UIView!
     
     let imageService = ImageService()
     var imageRequest: Request?
@@ -27,6 +29,15 @@ class WikiTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         imageService.delegate = self
+        bgView.layer.cornerRadius = 4
+        cellImage.layer.cornerRadius = 4
+        
+        // Shadow
+        shadowView.layer.cornerRadius = 4
+        shadowView.layer.masksToBounds = false
+        shadowView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        shadowView.layer.shadowRadius = 8
+        shadowView.layer.shadowOpacity = 0.75
     }
     
     override func prepareForReuse() {

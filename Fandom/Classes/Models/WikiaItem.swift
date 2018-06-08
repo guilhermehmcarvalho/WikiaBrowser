@@ -28,9 +28,9 @@ class WikiaItem: NSManagedObject, Codable {
     @NSManaged var image: String?
     @NSManaged var url: String?
     @NSManaged var title: String
+    @NSManaged var stats: WikiaStats?
     
-    private enum CodingKeys: String, CodingKey { case id, name, domain, language, hub, topic, headline,
-        desc, image, url, title
+    private enum CodingKeys: String, CodingKey { case id, name, domain, language, hub, topic, headline, desc, image, url, title, stats
     }
     
     public static let entityName = "WikiaItem"
@@ -64,6 +64,7 @@ class WikiaItem: NSManagedObject, Codable {
         image = try container.decodeIfPresent(String.self, forKey: .image)
         url = try container.decodeIfPresent(String.self, forKey: .url)
         title = try container.decode(String.self, forKey: .title)
+        stats = try container.decode(WikiaStats.self, forKey: .stats)
     }
     
     // MARK: - Encodable
@@ -85,5 +86,6 @@ class WikiaItem: NSManagedObject, Codable {
         try container.encode(image, forKey: .image)
         try container.encode(url, forKey: .url)
         try container.encode(title, forKey: .title)
+        try container.encode(stats, forKey: .stats)
     }
 }

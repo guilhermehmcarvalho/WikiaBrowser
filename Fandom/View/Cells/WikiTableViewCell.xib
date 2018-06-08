@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,34 +31,36 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdy-bP-fP0">
-                        <rect key="frame" x="52" y="48" width="567" height="315"/>
+                        <rect key="frame" x="36" y="32" width="599" height="331"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8nr-06-gSE">
-                                <rect key="frame" x="-36" y="-32" width="100" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gv-Yp-b4i">
+                                <rect key="frame" x="-20" y="-16" width="164" height="164"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8nr-06-gSE">
+                                <rect key="frame" x="-20" y="-16" width="164" height="164"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="MQH-4Y-dnT"/>
                                     <constraint firstAttribute="width" secondItem="8nr-06-gSE" secondAttribute="height" multiplier="100:100" id="TKX-jF-cNS"/>
-                                    <constraint firstAttribute="height" constant="100" id="scm-HE-oeZ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv4-t2-g8X">
-                                <rect key="frame" x="80" y="8" width="479" height="60"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="19"/>
+                                <rect key="frame" x="166" y="8" width="425" height="140"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2N-XP-YD2">
-                                <rect key="frame" x="32" y="84" width="503" height="168"/>
-                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
+                                <rect key="frame" x="22" y="164" width="555" height="111"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
                                 <color key="textColor" red="0.81568627450980391" green="0.83529411764705885" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-Qi-PZC">
-                                <rect key="frame" x="197.5" y="269" width="172" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-Qi-PZC">
+                                <rect key="frame" x="22" y="283" width="555" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="KNi-RN-DJg">
-                                        <rect key="frame" x="0.0" y="6" width="36" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="174.5" height="40"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Art" image="icArticle">
@@ -65,7 +68,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Afj-4D-vt5">
-                                        <rect key="frame" x="52" y="6" width="46" height="18"/>
+                                        <rect key="frame" x="190.5" y="0.0" width="174" height="40"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Disc" image="icDiscussions">
@@ -73,7 +76,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-pi-1FL">
-                                        <rect key="frame" x="114" y="6" width="58" height="18"/>
+                                        <rect key="frame" x="380.5" y="0.0" width="174.5" height="40"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Video" image="icVideo">
@@ -82,21 +85,26 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="hCE-yg-oQ0"/>
+                                    <constraint firstAttribute="height" constant="40" id="hCE-yg-oQ0"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kTQ-Qi-PZC" firstAttribute="centerX" secondItem="Fdy-bP-fP0" secondAttribute="centerX" id="6gK-Ff-7rJ"/>
+                            <constraint firstItem="4gv-Yp-b4i" firstAttribute="height" secondItem="8nr-06-gSE" secondAttribute="height" id="7AJ-Tt-VxW"/>
+                            <constraint firstItem="4gv-Yp-b4i" firstAttribute="width" secondItem="8nr-06-gSE" secondAttribute="width" id="J2z-xI-i3k"/>
                             <constraint firstAttribute="trailing" secondItem="Qv4-t2-g8X" secondAttribute="trailing" constant="8" id="Jem-AR-ouq"/>
                             <constraint firstItem="Qv4-t2-g8X" firstAttribute="top" secondItem="Fdy-bP-fP0" secondAttribute="top" constant="8" id="KVd-2v-Ibh"/>
-                            <constraint firstAttribute="trailing" secondItem="J2N-XP-YD2" secondAttribute="trailing" constant="32" id="Kbv-i4-6u5"/>
-                            <constraint firstItem="kTQ-Qi-PZC" firstAttribute="top" secondItem="J2N-XP-YD2" secondAttribute="bottom" constant="17" id="Rva-e8-oOM"/>
-                            <constraint firstItem="8nr-06-gSE" firstAttribute="top" secondItem="Fdy-bP-fP0" secondAttribute="top" constant="-32" id="U0l-wk-iVV"/>
-                            <constraint firstItem="J2N-XP-YD2" firstAttribute="leading" secondItem="Fdy-bP-fP0" secondAttribute="leading" constant="32" id="fVK-OR-cog"/>
-                            <constraint firstItem="Qv4-t2-g8X" firstAttribute="leading" secondItem="8nr-06-gSE" secondAttribute="trailing" constant="16" id="hMa-Nj-Nla"/>
-                            <constraint firstAttribute="bottom" secondItem="kTQ-Qi-PZC" secondAttribute="bottom" constant="16" id="rX3-B9-9xB"/>
+                            <constraint firstAttribute="trailing" secondItem="J2N-XP-YD2" secondAttribute="trailing" constant="22" id="Kbv-i4-6u5"/>
+                            <constraint firstItem="kTQ-Qi-PZC" firstAttribute="top" secondItem="J2N-XP-YD2" secondAttribute="bottom" constant="8" id="Rva-e8-oOM"/>
+                            <constraint firstItem="8nr-06-gSE" firstAttribute="top" secondItem="Fdy-bP-fP0" secondAttribute="top" constant="-16" id="U0l-wk-iVV"/>
+                            <constraint firstItem="kTQ-Qi-PZC" firstAttribute="width" secondItem="J2N-XP-YD2" secondAttribute="width" id="XPX-yB-i8k"/>
+                            <constraint firstItem="4gv-Yp-b4i" firstAttribute="centerX" secondItem="8nr-06-gSE" secondAttribute="centerX" id="cvr-5y-7iZ"/>
+                            <constraint firstItem="J2N-XP-YD2" firstAttribute="leading" secondItem="Fdy-bP-fP0" secondAttribute="leading" constant="22" id="fVK-OR-cog"/>
+                            <constraint firstItem="Qv4-t2-g8X" firstAttribute="leading" secondItem="8nr-06-gSE" secondAttribute="trailing" constant="22" id="hMa-Nj-Nla"/>
+                            <constraint firstAttribute="bottom" secondItem="kTQ-Qi-PZC" secondAttribute="bottom" constant="8" id="rX3-B9-9xB"/>
+                            <constraint firstItem="4gv-Yp-b4i" firstAttribute="centerY" secondItem="8nr-06-gSE" secondAttribute="centerY" id="tBi-Mt-NvF"/>
                             <constraint firstItem="Qv4-t2-g8X" firstAttribute="bottom" secondItem="8nr-06-gSE" secondAttribute="bottom" id="vlO-iu-rBL"/>
                             <constraint firstItem="J2N-XP-YD2" firstAttribute="top" secondItem="Qv4-t2-g8X" secondAttribute="bottom" constant="16" id="zWw-qr-veN"/>
                         </constraints>
@@ -104,17 +112,20 @@
                 </subviews>
                 <color key="backgroundColor" red="0.92156862745098034" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="Fdy-bP-fP0" secondAttribute="trailing" constant="16" id="Cfo-YF-TB2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Fdy-bP-fP0" secondAttribute="trailing" id="Cfo-YF-TB2"/>
                     <constraint firstItem="8nr-06-gSE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="JIF-XW-BEP"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Fdy-bP-fP0" secondAttribute="bottom" constant="16" id="YFu-Fu-AWZ"/>
-                    <constraint firstItem="Fdy-bP-fP0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="32" id="fQh-wT-pRO"/>
+                    <constraint firstItem="Fdy-bP-fP0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="fQh-wT-pRO"/>
+                    <constraint firstItem="8nr-06-gSE" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.25" id="knR-cy-36c"/>
                     <constraint firstItem="8nr-06-gSE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="wzc-Uy-fRB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bgView" destination="Fdy-bP-fP0" id="oC2-3F-Lw3"/>
                 <outlet property="cellImage" destination="8nr-06-gSE" id="tUQ-My-r7N"/>
                 <outlet property="descriptionLabel" destination="J2N-XP-YD2" id="opb-mJ-M5B"/>
+                <outlet property="shadowView" destination="4gv-Yp-b4i" id="6t7-EV-cBE"/>
                 <outlet property="titleLabel" destination="Qv4-t2-g8X" id="Jv3-mG-1by"/>
             </connections>
             <point key="canvasLocation" x="132.5" y="135"/>
