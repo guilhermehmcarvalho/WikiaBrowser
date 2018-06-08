@@ -19,15 +19,15 @@ class WikiService: Service<RootResponse> {
     // MARK: - Public
     
     func getTopWikis(page: Int? = nil) {
-        apiService = WikiApiService().expand(1).batch(page)
+        apiService = WikiApiService().expand(1).batch(page).limit(30)
         apiService.get(failure: self.failure, success: self.success)
     }
     
     // MARK: - Private
     
     private func success(data: Data) {
-        storeManager.clearStorage()
         DispatchQueue.main.async {
+            self.storeManager.clearStorage()
             guard let response = self.jsonDecode(data) else {
                 print("Error decoding RootResponse")
                 self.failure(ServiceFailureType.encoding)

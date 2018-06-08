@@ -8,12 +8,14 @@
 
 import UIKit
 
-class WikisTableViewController: UITableViewController, WikiServiceDelegate {
+class WikisTableViewController: UITableViewController {
     
     // MARK: - Variables
     
     let service = WikiService()
     var wikiItems: [WikiaItem] = []
+    var page = 1
+    var loadingItems = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,7 @@ class WikisTableViewController: UITableViewController, WikiServiceDelegate {
         tableView.register(UINib(nibName: "WikiTableViewCell", bundle: nil),
                            forCellReuseIdentifier: WikiTableViewCell.reuseIdentifier)
         service.delegate = self
+        loadingItems = true
         service.getTopWikis()
     }
     
@@ -67,15 +70,31 @@ class WikisTableViewController: UITableViewController, WikiServiceDelegate {
         }
     }
     
-    // MARK: - WikiService
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
+                            forRowAt indexPath: IndexPath) {
+        if indexPath.row == wikiItems.count - 1 && !loadingItems {
+            page += 1
+            service.getTopWikis(page: page)
+            print("page \(page)")
+        }
+    }
+    
+}
+
+// MARK: - WikiServiceDelegate
+
+extension WikisTableViewController: WikiServiceDelegate {
     
     func requestDidComplete(_ items: [WikiaItem]) {
-        self.wikiItems = items
+        loadingItems = false
+        self.wikiItems.append(contentsOf: items)
         self.tableView.reloadData()
     }
     
     func requestDidComplete(cachedItems: [WikiaItem], failure: ServiceFailureType) {
-        self.wikiItems = cachedItems
+        print("requestDidComplete fail \(failure)")
+        loadingItems = false
+        //self.wikiItems = cachedItems
         self.tableView.reloadData()
     }
 }

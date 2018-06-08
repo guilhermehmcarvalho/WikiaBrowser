@@ -44,14 +44,7 @@ class WikiApiService: ApiService {
                 return
             }
             
-            if let error = response.error {
-                
-                if let result = response.result.value {
-                    if let JSON = result as? [NSDictionary] {
-                        print(JSON)
-                    }
-                }
-                
+            if let error = response.error {                
                 if error as? AFError == nil {
                     failure(.connection)
                 } else {
