@@ -18,6 +18,7 @@
         <attribute name="activeUsers" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="admins" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="articles" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="discussions" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="edits" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="images" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pages" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -26,6 +27,6 @@
     </entity>
     <elements>
         <element name="WikiaItem" positionX="-45" positionY="0" width="128" height="225"/>
-        <element name="WikiaStats" positionX="-45" positionY="81" width="128" height="165"/>
+        <element name="WikiaStats" positionX="-45" positionY="81" width="128" height="180"/>
     </elements>
 </model>

@@ -64,7 +64,7 @@ class WikiaItem: NSManagedObject, Codable {
         image = try container.decodeIfPresent(String.self, forKey: .image)
         url = try container.decodeIfPresent(String.self, forKey: .url)
         title = try container.decode(String.self, forKey: .title)
-        stats = try container.decode(WikiaStats.self, forKey: .stats)
+        stats = try container.decodeIfPresent(WikiaStats.self, forKey: .stats)
     }
     
     // MARK: - Encodable

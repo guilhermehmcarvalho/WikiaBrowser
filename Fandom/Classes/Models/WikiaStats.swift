@@ -22,8 +22,9 @@ class WikiaStats: NSManagedObject, Codable {
     @NSManaged var edits: Int
     @NSManaged var videos: Int
     @NSManaged var images: Int
+    @NSManaged var discussions: Int
     
-    private enum CodingKeys: String, CodingKey { case users, articles, pages, admins, activeUsers, edits, videos, images
+    private enum CodingKeys: String, CodingKey { case users, articles, pages, admins, activeUsers, edits, videos, images, discussions
     }
     
     public static let entityName = "WikiaStats"
@@ -45,13 +46,14 @@ class WikiaStats: NSManagedObject, Codable {
         
         // Base
         users = try container.decode(Int.self, forKey: .users)
-        articles = try container.decode(Int.self, forKey: .articles)
-        pages = try container.decode(Int.self, forKey: .pages)
+        articles = try container.decodeIfPresent(Int.self, forKey: .articles) ?? -1
+        pages = try container.decodeIfPresent(Int.self, forKey: .pages)  ?? -1
         admins = try container.decode(Int.self, forKey: .admins)
         activeUsers = try container.decode(Int.self, forKey: .activeUsers)
         edits = try container.decode(Int.self, forKey: .edits)
-        videos = try container.decode(Int.self, forKey: .videos)
+        videos = try container.decodeIfPresent(Int.self, forKey: .videos) ?? -1
         images = try container.decode(Int.self, forKey: .images)
+        discussions = try container.decodeIfPresent(Int.self, forKey: .discussions) ?? -1
     }
     
     // MARK: - Encodable
@@ -68,5 +70,6 @@ class WikiaStats: NSManagedObject, Codable {
         try container.encode(edits, forKey: .edits)
         try container.encode(videos, forKey: .videos)
         try container.encode(images, forKey: .images)
+        try container.encode(discussions, forKey: .discussions)
     }
 }

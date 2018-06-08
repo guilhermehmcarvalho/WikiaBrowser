@@ -51,59 +51,86 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2N-XP-YD2">
-                                <rect key="frame" x="22" y="164" width="555" height="111"/>
+                                <rect key="frame" x="22" y="164" width="555" height="117"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
                                 <color key="textColor" red="0.81568627450980391" green="0.83529411764705885" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-Qi-PZC">
-                                <rect key="frame" x="22" y="283" width="555" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-Qi-PZC">
+                                <rect key="frame" x="171" y="297" width="258.5" height="18"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="KNi-RN-DJg">
-                                        <rect key="frame" x="0.0" y="0.0" width="174.5" height="40"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
-                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Art" image="icArticle">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Afj-4D-vt5">
-                                        <rect key="frame" x="190.5" y="0.0" width="174" height="40"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
-                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Disc" image="icDiscussions">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-pi-1FL">
-                                        <rect key="frame" x="380.5" y="0.0" width="174.5" height="40"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
-                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Video" image="icVideo">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YcX-8n-XMw">
+                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="18"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icArticle" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-Ft-URR">
+                                                <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XVI-Ft-URR" secondAttribute="height" multiplier="1:1" id="gn1-AV-Qs5"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="56k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqM-aX-IZI">
+                                                <rect key="frame" x="26" y="0.0" width="31.5" height="18"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eVF-XX-euu">
+                                        <rect key="frame" x="73.5" y="0.0" width="108.5" height="18"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icDiscussions" translatesAutoresizingMaskIntoConstraints="NO" id="C2h-5l-0Zl">
+                                                <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="C2h-5l-0Zl" secondAttribute="height" multiplier="1:1" id="AcW-bj-D0A"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discussions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaB-5W-c05">
+                                                <rect key="frame" x="26" y="0.0" width="82.5" height="18"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eb9-8P-vuG">
+                                        <rect key="frame" x="198" y="0.0" width="60.5" height="18"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icVideo" translatesAutoresizingMaskIntoConstraints="NO" id="lNb-nW-ahW">
+                                                <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="lNb-nW-ahW" secondAttribute="height" multiplier="1:1" id="rOD-4N-0b6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuE-fw-X85">
+                                                <rect key="frame" x="26" y="0.0" width="34.5" height="18"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="hCE-yg-oQ0"/>
+                                    <constraint firstAttribute="height" constant="18" id="hCE-yg-oQ0"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kTQ-Qi-PZC" firstAttribute="centerX" secondItem="Fdy-bP-fP0" secondAttribute="centerX" id="6gK-Ff-7rJ"/>
                             <constraint firstItem="4gv-Yp-b4i" firstAttribute="height" secondItem="8nr-06-gSE" secondAttribute="height" id="7AJ-Tt-VxW"/>
+                            <constraint firstItem="kTQ-Qi-PZC" firstAttribute="centerX" secondItem="Fdy-bP-fP0" secondAttribute="centerX" id="GDI-dK-7B7"/>
                             <constraint firstItem="4gv-Yp-b4i" firstAttribute="width" secondItem="8nr-06-gSE" secondAttribute="width" id="J2z-xI-i3k"/>
                             <constraint firstAttribute="trailing" secondItem="Qv4-t2-g8X" secondAttribute="trailing" constant="8" id="Jem-AR-ouq"/>
                             <constraint firstItem="Qv4-t2-g8X" firstAttribute="top" secondItem="Fdy-bP-fP0" secondAttribute="top" constant="8" id="KVd-2v-Ibh"/>
                             <constraint firstAttribute="trailing" secondItem="J2N-XP-YD2" secondAttribute="trailing" constant="22" id="Kbv-i4-6u5"/>
-                            <constraint firstItem="kTQ-Qi-PZC" firstAttribute="top" secondItem="J2N-XP-YD2" secondAttribute="bottom" constant="8" id="Rva-e8-oOM"/>
+                            <constraint firstItem="kTQ-Qi-PZC" firstAttribute="width" relation="lessThanOrEqual" secondItem="J2N-XP-YD2" secondAttribute="width" id="MSE-ES-mhV"/>
+                            <constraint firstItem="kTQ-Qi-PZC" firstAttribute="top" secondItem="J2N-XP-YD2" secondAttribute="bottom" constant="16" id="Rva-e8-oOM"/>
                             <constraint firstItem="8nr-06-gSE" firstAttribute="top" secondItem="Fdy-bP-fP0" secondAttribute="top" constant="-16" id="U0l-wk-iVV"/>
-                            <constraint firstItem="kTQ-Qi-PZC" firstAttribute="width" secondItem="J2N-XP-YD2" secondAttribute="width" id="XPX-yB-i8k"/>
                             <constraint firstItem="4gv-Yp-b4i" firstAttribute="centerX" secondItem="8nr-06-gSE" secondAttribute="centerX" id="cvr-5y-7iZ"/>
                             <constraint firstItem="J2N-XP-YD2" firstAttribute="leading" secondItem="Fdy-bP-fP0" secondAttribute="leading" constant="22" id="fVK-OR-cog"/>
                             <constraint firstItem="Qv4-t2-g8X" firstAttribute="leading" secondItem="8nr-06-gSE" secondAttribute="trailing" constant="22" id="hMa-Nj-Nla"/>
-                            <constraint firstAttribute="bottom" secondItem="kTQ-Qi-PZC" secondAttribute="bottom" constant="8" id="rX3-B9-9xB"/>
+                            <constraint firstAttribute="bottom" secondItem="kTQ-Qi-PZC" secondAttribute="bottom" constant="16" id="rX3-B9-9xB"/>
                             <constraint firstItem="4gv-Yp-b4i" firstAttribute="centerY" secondItem="8nr-06-gSE" secondAttribute="centerY" id="tBi-Mt-NvF"/>
                             <constraint firstItem="Qv4-t2-g8X" firstAttribute="bottom" secondItem="8nr-06-gSE" secondAttribute="bottom" id="vlO-iu-rBL"/>
                             <constraint firstItem="J2N-XP-YD2" firstAttribute="top" secondItem="Qv4-t2-g8X" secondAttribute="bottom" constant="16" id="zWw-qr-veN"/>
@@ -122,11 +149,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="articleLabel" destination="VqM-aX-IZI" id="8ht-zj-Vrp"/>
+                <outlet property="articleView" destination="YcX-8n-XMw" id="pWT-So-vJk"/>
                 <outlet property="bgView" destination="Fdy-bP-fP0" id="oC2-3F-Lw3"/>
                 <outlet property="cellImage" destination="8nr-06-gSE" id="tUQ-My-r7N"/>
                 <outlet property="descriptionLabel" destination="J2N-XP-YD2" id="opb-mJ-M5B"/>
+                <outlet property="discussionsLabel" destination="XaB-5W-c05" id="9rv-6U-B3J"/>
+                <outlet property="discussionsView" destination="eVF-XX-euu" id="rg0-vE-2qy"/>
                 <outlet property="shadowView" destination="4gv-Yp-b4i" id="6t7-EV-cBE"/>
                 <outlet property="titleLabel" destination="Qv4-t2-g8X" id="Jv3-mG-1by"/>
+                <outlet property="videoLabel" destination="PuE-fw-X85" id="rnR-SA-8kI"/>
+                <outlet property="videoView" destination="eb9-8P-vuG" id="fw0-Mz-Nwb"/>
             </connections>
             <point key="canvasLocation" x="132.5" y="135"/>
         </tableViewCell>

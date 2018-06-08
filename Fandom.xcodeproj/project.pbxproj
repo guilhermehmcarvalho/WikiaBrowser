@@ -32,6 +32,7 @@
 		7941FD1620C96DA3004C95BE /* RootResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD1520C96DA3004C95BE /* RootResponse.swift */; };
 		7941FD1820C978FA004C95BE /* CodingUserInfoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FD1720C978FA004C95BE /* CodingUserInfoKey.swift */; };
 		7992853820CA904800CD6178 /* WikiaStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992853720CA904800CD6178 /* WikiaStats.swift */; };
+		7992853A20CAAA6C00CD6178 /* Int+ToShortString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992853920CAAA6C00CD6178 /* Int+ToShortString.swift */; };
 		799C550820CA77B00000A09B /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799C550720CA77B00000A09B /* ImageService.swift */; };
 		A680C0668770DBECF5F40BAB /* Pods_Fandom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4365C4537ECDA2842507448 /* Pods_Fandom.framework */; };
 		BC9351A2A4DD4490B53C1250 /* Pods_FandomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03BF1508D437C2C68EBE675 /* Pods_FandomUITests.framework */; };
@@ -89,6 +90,7 @@
 		7941FD1520C96DA3004C95BE /* RootResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootResponse.swift; sourceTree = "<group>"; };
 		7941FD1720C978FA004C95BE /* CodingUserInfoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingUserInfoKey.swift; sourceTree = "<group>"; };
 		7992853720CA904800CD6178 /* WikiaStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiaStats.swift; sourceTree = "<group>"; };
+		7992853920CAAA6C00CD6178 /* Int+ToShortString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ToShortString.swift"; sourceTree = "<group>"; };
 		799C550720CA77B00000A09B /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		8821AA5F66B2CE2AE1868598 /* Pods-FandomUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FandomUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FandomUITests/Pods-FandomUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4365C4537ECDA2842507448 /* Pods_Fandom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fandom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +285,7 @@
 			children = (
 				7941FD0220C9426F004C95BE /* Bundle.swift */,
 				7941FD1720C978FA004C95BE /* CodingUserInfoKey.swift */,
+				7992853920CAAA6C00CD6178 /* Int+ToShortString.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				7941FD0020C941ED004C95BE /* APIRouter.swift in Sources */,
 				7941FD0920C94E3D004C95BE /* Service.swift in Sources */,
 				7941FCF220C925E3004C95BE /* WikiTableViewCell.swift in Sources */,
+				7992853A20CAAA6C00CD6178 /* Int+ToShortString.swift in Sources */,
 				7941FCBB20C919CF004C95BE /* AppDelegate.swift in Sources */,
 				7941FD1420C966F0004C95BE /* WikiApiService.swift in Sources */,
 				14B9B35020C9AA0F009C3DC1 /* WikiStoreManager.swift in Sources */,
