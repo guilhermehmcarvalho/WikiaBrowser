@@ -16,15 +16,22 @@ class WikisTableViewController: UITableViewController, WikiServiceDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.configureTitle()
         tableView.register(UINib(nibName: "WikiTableViewCell", bundle: nil),
                            forCellReuseIdentifier: WikiTableViewCell.reuseIdentifier)
         service.delegate = self
         service.getTopWikis()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func configureTitle() {
+        if let font = UIFont(name: "Rubik-Regular", size: 20) {
+            let atributes = [NSAttributedStringKey.font: font]
+            self.navigationController?.navigationBar.titleTextAttributes = atributes
+        }
+        self.navigationController?.navigationBar.barTintColor = UIColor.App.darkGray
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.title = "Top Wikis"
     }
 
     // MARK: - Table view data source
@@ -45,9 +52,7 @@ class WikisTableViewController: UITableViewController, WikiServiceDelegate {
                 fatalError("Unexpected Index Path")
         }
 
-        // Configure the cell...
         cell.configureWith(wikiItems[indexPath.row])
-
         return cell
     }
     
