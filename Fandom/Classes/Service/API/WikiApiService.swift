@@ -79,23 +79,23 @@ class WikiApiService: ApiService {
         
         var params: Parameters = [:]
         
-        if let expand = expand {
+        if let expand = builder.expand {
             params[APIParameterKey.expand] = expand
         }
         
-        if let lang = lang {
+        if let lang = builder.lang {
             params[APIParameterKey.lang] = lang
         }
         
-        if let hub = hub {
+        if let hub = builder.hub {
             params[APIParameterKey.hub] = hub
         }
         
-        if let limit = limit {
+        if let limit = builder.limit {
             params[APIParameterKey.limit] = limit
         }
         
-        if let batch = batch {
+        if let batch = builder.batch {
             params[APIParameterKey.batch] = batch
         }
         
@@ -124,7 +124,7 @@ extension WikiApiService {
         return self
     }
     
-    func batch(_ value: Int) -> Self {
+    func batch(_ value: Int?) -> Self {
         builder.batch = value
         return self
     }

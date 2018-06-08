@@ -46,6 +46,7 @@ class WikisTableViewController: UITableViewController, WikiServiceDelegate {
         }
 
         // Configure the cell...
+        cell.configureWith(wikiItems[indexPath.row])
 
         return cell
     }

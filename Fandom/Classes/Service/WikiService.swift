@@ -14,11 +14,12 @@ class WikiService: Service<RootResponse> {
     
     weak public var delegate: WikiServiceDelegate?
     fileprivate let storeManager = WikiStoreManager()
+    fileprivate var apiService: WikiApiService!
     
     // MARK: - Public
     
-    func getTopWikis() {
-        let apiService = WikiApiService().limit(1)
+    func getTopWikis(page: Int? = nil) {
+        apiService = WikiApiService().expand(1).batch(page)
         apiService.get(failure: self.failure, success: self.success)
     }
     

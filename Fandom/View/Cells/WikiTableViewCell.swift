@@ -20,10 +20,12 @@ class WikiTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    // MARK: - Public
     
+    func configureWith(_ wiki: WikiaItem) {
+        titleLabel.text = wiki.title
+        descriptionLabel.text = wiki.desc
+        
+        //request = imageService.getImage(size: .coverBig, game: game, retinaSize: RetinaSize.retina2x)
+    }
 }
