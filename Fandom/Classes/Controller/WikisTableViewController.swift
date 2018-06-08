@@ -12,10 +12,10 @@ class WikisTableViewController: UITableViewController {
     
     // MARK: - Variables
     
-    let service = WikiService()
-    var wikiItems: [WikiaItem] = []
-    var page = 1
-    var loadingItems = false
+    fileprivate let service = WikiService()
+    fileprivate var wikiItems: [WikiaItem] = []
+    fileprivate var page = 0
+    fileprivate var isLoading = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,11 @@ class WikisTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "WikiTableViewCell", bundle: nil),
                            forCellReuseIdentifier: WikiTableViewCell.reuseIdentifier)
         service.delegate = self
-        loadingItems = true
-        service.getTopWikis()
+        
+        self.refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refreshWikiItems(_:)), for: .valueChanged)
+        
+        getWikiItems()
     }
     
     // MARK: - private
@@ -39,6 +42,22 @@ class WikisTableViewController: UITableViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.isTranslucent = false
         self.title = "Top Wikis"
+    }
+    
+    @objc private func refreshWikiItems(_ sender: Any) {
+        // Fetch Weather Data
+        page = 0
+        getWikiItems()
+    }
+    
+    private func getWikiItems() {
+        if !isLoading {
+            service.getTopWikis(page: page)
+            refreshControl?.beginRefreshing()
+            print("page \(page)")
+            refreshControl?.beginRefreshing()
+            isLoading = true
+        }
     }
 
     // MARK: - Table view data source
@@ -72,10 +91,12 @@ class WikisTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
                             forRowAt indexPath: IndexPath) {
-        if indexPath.row == wikiItems.count - 1 && !loadingItems {
-            page += 1
-            service.getTopWikis(page: page)
-            print("page \(page)")
+        guard let isRefreshing = refreshControl?.isRefreshing else {
+            fatalError("No refresh control")
+        }
+        
+        if indexPath.row == wikiItems.count - 1 && !isRefreshing {
+            self.getWikiItems()
         }
     }
     
@@ -86,15 +107,23 @@ class WikisTableViewController: UITableViewController {
 extension WikisTableViewController: WikiServiceDelegate {
     
     func requestDidComplete(_ items: [WikiaItem]) {
-        loadingItems = false
-        self.wikiItems.append(contentsOf: items)
+        if page == 0 {
+            self.wikiItems = items
+        } else {
+            self.wikiItems.append(contentsOf: items)
+        }
+        
+        page += 1
+        isLoading = false
+        refreshControl?.endRefreshing()
         self.tableView.reloadData()
     }
     
     func requestDidComplete(cachedItems: [WikiaItem], failure: ServiceFailureType) {
         print("requestDidComplete fail \(failure)")
-        loadingItems = false
-        //self.wikiItems = cachedItems
+        self.wikiItems = cachedItems
         self.tableView.reloadData()
+        refreshControl?.endRefreshing()
+        isLoading = false
     }
 }

@@ -22,7 +22,9 @@ class WikiService: Service<RootResponse> {
     func getTopWikis(page: Int? = nil) {
         apiService = WikiApiService().expand(1).batch(page).limit(30)
         apiService.get(failure: self.failure, success: self.success)
-        shouldClearStorage = page == nil
+        if (page == nil || page == 0) {
+            shouldClearStorage = true
+        }
     }
     
     // MARK: - Private
