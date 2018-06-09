@@ -40,11 +40,14 @@ class WikiStoreManager: NSObject {
     
     func clearStorage() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: WikiaItem.entityName)
-        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         do {
-            try backgroundContext.execute(batchDeleteRequest)
+            let objs = try backgroundContext.fetch(fetchRequest)
+            for case let obj as NSManagedObject in objs {
+                backgroundContext.delete(obj)
+            }
+            
             try backgroundContext.save()
-        } catch let error as NSError {
+        } catch let error {
             print(error)
         }
     }
