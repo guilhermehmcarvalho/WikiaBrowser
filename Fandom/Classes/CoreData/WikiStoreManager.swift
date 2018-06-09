@@ -43,6 +43,7 @@ class WikiStoreManager: NSObject {
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         do {
             try backgroundContext.execute(batchDeleteRequest)
+            try backgroundContext.save()
         } catch let error as NSError {
             print(error)
         }
@@ -51,9 +52,8 @@ class WikiStoreManager: NSObject {
     // Fetch all Items sorted by date
     func fetchAll() -> [WikiaItem] {
         var results = [WikiaItem]()
-        
-        guard let request: NSFetchRequest<WikiaItem> = WikiaItem.fetchRequest() as? NSFetchRequest<WikiaItem>
-            else { fatalError("Unable to fetch WikiaItem") }
+        let request = NSFetchRequest<WikiaItem>(entityName: WikiaItem.entityName)
+
         do {
             let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: true)
             request.sortDescriptors = [sortDescriptor]
