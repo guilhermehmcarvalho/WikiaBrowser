@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		14B9B35020C9AA0F009C3DC1 /* WikiStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9B34F20C9AA0F009C3DC1 /* WikiStoreManager.swift */; };
 		14B9B35220C9B1D8009C3DC1 /* ServiceFailureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9B35120C9B1D8009C3DC1 /* ServiceFailureType.swift */; };
+		14F1109120CBB59300E74C53 /* APIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109020CBB59300E74C53 /* APIServiceTest.swift */; };
+		14F1109320CBB5BE00E74C53 /* WikiAPIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */; };
+		14F1109420CBB9F200E74C53 /* Fandom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCC120C919CF004C95BE /* Fandom.xcdatamodeld */; };
+		14F1109720CBBAA900E74C53 /* WikiStoreManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109620CBBAA900E74C53 /* WikiStoreManagerTest.swift */; };
 		5D7480AEA2464D8BABDD088E /* Pods_FandomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1ACE896F240603E8852343 /* Pods_FandomTests.framework */; };
 		7941FCBB20C919CF004C95BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCBA20C919CF004C95BE /* AppDelegate.swift */; };
 		7941FCC020C919CF004C95BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7941FCBE20C919CF004C95BE /* Main.storyboard */; };
@@ -59,6 +63,9 @@
 /* Begin PBXFileReference section */
 		14B9B34F20C9AA0F009C3DC1 /* WikiStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiStoreManager.swift; sourceTree = "<group>"; };
 		14B9B35120C9B1D8009C3DC1 /* ServiceFailureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFailureType.swift; sourceTree = "<group>"; };
+		14F1109020CBB59300E74C53 /* APIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTest.swift; sourceTree = "<group>"; };
+		14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPIServiceTest.swift; sourceTree = "<group>"; };
+		14F1109620CBBAA900E74C53 /* WikiStoreManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiStoreManagerTest.swift; sourceTree = "<group>"; };
 		191E87482B4A9C3E76A08AC3 /* Pods-Fandom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fandom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fandom/Pods-Fandom.debug.xcconfig"; sourceTree = "<group>"; };
 		341FA93E20B05D147F7B4B03 /* Pods-FandomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FandomTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FandomTests/Pods-FandomTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B1ACE896F240603E8852343 /* Pods_FandomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FandomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +149,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		14F1108E20CBB57500E74C53 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				14F1108F20CBB57C00E74C53 /* API */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		14F1108F20CBB57C00E74C53 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				14F1109020CBB59300E74C53 /* APIServiceTest.swift */,
+				14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		14F1109520CBBA8C00E74C53 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				14F1109620CBBAA900E74C53 /* WikiStoreManagerTest.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		7941FCAE20C919CF004C95BE = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +212,8 @@
 		7941FCD120C919D9004C95BE /* FandomTests */ = {
 			isa = PBXGroup;
 			children = (
+				14F1109520CBBA8C00E74C53 /* CoreData */,
+				14F1108E20CBB57500E74C53 /* Service */,
 				7941FCD220C919D9004C95BE /* FandomTests.swift */,
 				7941FCD420C919D9004C95BE /* Info.plist */,
 			);
@@ -577,7 +611,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F1109420CBB9F200E74C53 /* Fandom.xcdatamodeld in Sources */,
+				14F1109120CBB59300E74C53 /* APIServiceTest.swift in Sources */,
+				14F1109720CBBAA900E74C53 /* WikiStoreManagerTest.swift in Sources */,
 				7941FCD320C919D9004C95BE /* FandomTests.swift in Sources */,
+				14F1109320CBB5BE00E74C53 /* WikiAPIServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
