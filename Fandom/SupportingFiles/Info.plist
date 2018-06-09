@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ApiBaseUrl</key>
-	<string>https://www.wikia.com</string>
+	<string>$(API_BASE_URL)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

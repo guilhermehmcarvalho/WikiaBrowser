@@ -33,7 +33,8 @@ class WikiaItem: NSManagedObject, Codable {
     // Others
     @NSManaged var timestamp: Date?
     
-    private enum CodingKeys: String, CodingKey { case id, name, domain, language, hub, topic, headline, desc, image, url, title, stats
+    private enum CodingKeys: String, CodingKey { case id, name, domain, language, hub, topic, headline,
+        desc, image, url, title, stats
     }
     
     public static let entityName = "WikiaItem"
@@ -45,7 +46,8 @@ class WikiaItem: NSManagedObject, Codable {
         guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext,
             let managedObjectContext = decoder.userInfo[codingUserInfoKeyManagedObjectContext]
                 as? NSManagedObjectContext,
-            let entity = NSEntityDescription.entity(forEntityName: WikiaItem.entityName, in: managedObjectContext) else {
+            let entity = NSEntityDescription.entity(forEntityName: WikiaItem.entityName, in: managedObjectContext)
+            else {
                 fatalError("Failed to decode WikiaItem")
         }
         
