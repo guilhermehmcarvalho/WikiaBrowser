@@ -24,10 +24,10 @@ class WikiaItem: NSManagedObject, Codable {
     
     // Expanded
     @NSManaged var headline: String?
-    @NSManaged var desc: String
+    @NSManaged var desc: String?
     @NSManaged var image: String?
     @NSManaged var url: String?
-    @NSManaged var title: String
+    @NSManaged var title: String?
     @NSManaged var stats: WikiaStats?
     
     // Others
@@ -65,10 +65,10 @@ class WikiaItem: NSManagedObject, Codable {
         
         // Expanded
         headline = try container.decodeIfPresent(String.self, forKey: .headline)
-        desc = try container.decode(String.self, forKey: .desc)
+        desc = try container.decodeIfPresent(String.self, forKey: .desc)
         image = try container.decodeIfPresent(String.self, forKey: .image)
         url = try container.decodeIfPresent(String.self, forKey: .url)
-        title = try container.decode(String.self, forKey: .title)
+        title = try container.decodeIfPresent(String.self, forKey: .title)
         stats = try container.decodeIfPresent(WikiaStats.self, forKey: .stats)
         
         // Others
