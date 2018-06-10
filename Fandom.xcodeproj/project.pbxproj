@@ -257,7 +257,7 @@
 				7941FCBA20C919CF004C95BE /* AppDelegate.swift */,
 				7941FCF420C93B67004C95BE /* Controller */,
 				7941FD1920C97A0D004C95BE /* CoreData */,
-				7941FD0120C9424F004C95BE /* Helpers */,
+				7941FD0120C9424F004C95BE /* Extensions */,
 				7941FD0A20C94F2F004C95BE /* Models */,
 				7941FCFD20C941D4004C95BE /* Service */,
 			);
@@ -341,7 +341,7 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		7941FD0120C9424F004C95BE /* Helpers */ = {
+		7941FD0120C9424F004C95BE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				7941FD0220C9426F004C95BE /* Bundle.swift */,
@@ -349,6 +349,7 @@
 				7992853920CAAA6C00CD6178 /* Int+ToShortString.swift */,
 				7992853B20CAB1BE00CD6178 /* UIColor+App.swift */,
 			);
+			name = Extensions;
 			path = Helpers;
 			sourceTree = "<group>";
 		};

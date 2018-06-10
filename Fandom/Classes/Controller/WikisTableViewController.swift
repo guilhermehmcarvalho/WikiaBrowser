@@ -34,7 +34,8 @@ class WikisTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.configureTitle()
+        self.title = "Top Wikis"
+        
         self.configureLangButton()
         self.configureTableView()
         
@@ -55,17 +56,6 @@ class WikisTableViewController: UIViewController {
                                 forCellReuseIdentifier: WikiTableViewCell.reuseIdentifier)
         self.refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refreshWikiItems(_:)), for: .valueChanged)
-    }
-    
-    private func configureTitle() {
-        if let font = UIFont(name: "Rubik-Regular", size: 20) {
-            let atributes = [NSAttributedStringKey.font: font]
-            self.navigationController?.navigationBar.titleTextAttributes = atributes
-        }
-        self.navigationController?.navigationBar.barTintColor = UIColor.App.darkGray
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.title = "Top Wikis"
     }
     
     @objc func refreshWikiItems(_ sender: Any?) {

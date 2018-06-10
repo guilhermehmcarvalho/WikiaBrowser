@@ -18,6 +18,7 @@ extension WikisTableViewController {
         dropdown.textColor = UIColor.white
         dropdown.backgroundColor = UIColor.App.darkGray
         dropdown.selectionBackgroundColor = UIColor.App.lightGray
+        dropdown.width = 80.0
         
         dropdown.selectionAction = {(index: Int, item: String) in
             if let language = Language(rawValue: index) {

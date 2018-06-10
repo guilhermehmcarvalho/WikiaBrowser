@@ -16,9 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+
+        customizeNavigationBar()
+        
 		return true
 	}
+    
+    private func customizeNavigationBar() {
+        UINavigationBar.appearance().barTintColor = UIColor.App.darkGray
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
+        if let titleFont = UIFont(name: "Rubik-Regular", size: 20) {
+            let atributes = [NSAttributedStringKey.font: titleFont]
+            UINavigationBar.appearance().titleTextAttributes = atributes
+        }
+        
+        if let font = UIFont(name: "Rubik-Regular", size: 18) {
+            let attributes = [NSAttributedStringKey.font: font]
+            UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal)
+        }
+    }
 
 	// MARK: - Core Data stack
 
