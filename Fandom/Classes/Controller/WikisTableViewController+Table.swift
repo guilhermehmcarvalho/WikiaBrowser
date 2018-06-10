@@ -34,8 +34,12 @@ extension WikisTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let wikia = wikiItems[indexPath.row]
-        if let wikiaLink = wikia.url, let url = URL(string: wikiaLink) {
-            UIApplication.shared.open(url)
+        let viewController = WebViewController(nibName: "WebViewController", bundle: nil)
+        
+        if let wikiaLink = wikia.url?.replacingOccurrences(of: "http://", with: "https://"),
+            let url = URL(string: wikiaLink) {
+            viewController.url = url
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
     
