@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		14B9B35020C9AA0F009C3DC1 /* WikiStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9B34F20C9AA0F009C3DC1 /* WikiStoreManager.swift */; };
 		14B9B35220C9B1D8009C3DC1 /* ServiceFailureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9B35120C9B1D8009C3DC1 /* ServiceFailureType.swift */; };
+		14C0C61120CD230C00D0D224 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C61020CD230C00D0D224 /* Language.swift */; };
+		14C0C61520CD2B1500D0D224 /* WikisTableViewController+Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C61420CD2B1500D0D224 /* WikisTableViewController+Lang.swift */; };
 		14F1109120CBB59300E74C53 /* APIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109020CBB59300E74C53 /* APIServiceTest.swift */; };
 		14F1109320CBB5BE00E74C53 /* WikiAPIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */; };
 		14F1109420CBB9F200E74C53 /* Fandom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCC120C919CF004C95BE /* Fandom.xcdatamodeld */; };
@@ -62,11 +64,14 @@
 /* Begin PBXFileReference section */
 		14B9B34F20C9AA0F009C3DC1 /* WikiStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiStoreManager.swift; sourceTree = "<group>"; };
 		14B9B35120C9B1D8009C3DC1 /* ServiceFailureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFailureType.swift; sourceTree = "<group>"; };
+		14C0C61020CD230C00D0D224 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		14C0C61420CD2B1500D0D224 /* WikisTableViewController+Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WikisTableViewController+Lang.swift"; sourceTree = "<group>"; };
 		14F1109020CBB59300E74C53 /* APIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTest.swift; sourceTree = "<group>"; };
 		14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPIServiceTest.swift; sourceTree = "<group>"; };
 		14F1109620CBBAA900E74C53 /* WikiStoreManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiStoreManagerTest.swift; sourceTree = "<group>"; };
 		14F1109820CBF44100E74C53 /* WikisTableViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikisTableViewControllerUITest.swift; sourceTree = "<group>"; };
 		191E87482B4A9C3E76A08AC3 /* Pods-Fandom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fandom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fandom/Pods-Fandom.debug.xcconfig"; sourceTree = "<group>"; };
+		2CBF4C61788E771B2B78B107 /* Pods-Fandom.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fandom.test.xcconfig"; path = "Pods/Target Support Files/Pods-Fandom/Pods-Fandom.test.xcconfig"; sourceTree = "<group>"; };
 		341FA93E20B05D147F7B4B03 /* Pods-FandomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FandomTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FandomTests/Pods-FandomTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B1ACE896F240603E8852343 /* Pods_FandomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FandomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5452207F4575716C64A539E2 /* Pods-FandomUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FandomUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FandomUITests/Pods-FandomUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +105,8 @@
 		7992853B20CAB1BE00CD6178 /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		799C550720CA77B00000A09B /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		8821AA5F66B2CE2AE1868598 /* Pods-FandomUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FandomUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FandomUITests/Pods-FandomUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		986CAB62F18BFD23FDC0ECBD /* Pods-FandomUITests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FandomUITests.test.xcconfig"; path = "Pods/Target Support Files/Pods-FandomUITests/Pods-FandomUITests.test.xcconfig"; sourceTree = "<group>"; };
+		9A471FA3FE151DA40DFDF27C /* Pods-FandomTests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FandomTests.test.xcconfig"; path = "Pods/Target Support Files/Pods-FandomTests/Pods-FandomTests.test.xcconfig"; sourceTree = "<group>"; };
 		D4365C4537ECDA2842507448 /* Pods_Fandom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fandom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03BF1508D437C2C68EBE675 /* Pods_FandomUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FandomUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FA7514CA214E6772F088A0 /* Pods-FandomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FandomTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FandomTests/Pods-FandomTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +150,9 @@
 				F1FA7514CA214E6772F088A0 /* Pods-FandomTests.release.xcconfig */,
 				8821AA5F66B2CE2AE1868598 /* Pods-FandomUITests.debug.xcconfig */,
 				5452207F4575716C64A539E2 /* Pods-FandomUITests.release.xcconfig */,
+				2CBF4C61788E771B2B78B107 /* Pods-Fandom.test.xcconfig */,
+				9A471FA3FE151DA40DFDF27C /* Pods-FandomTests.test.xcconfig */,
+				986CAB62F18BFD23FDC0ECBD /* Pods-FandomUITests.test.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -278,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				7941FCF520C93B81004C95BE /* WikisTableViewController.swift */,
+				14C0C61420CD2B1500D0D224 /* WikisTableViewController+Lang.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,6 +341,7 @@
 				7941FD0B20C94F3A004C95BE /* WikiaItem.swift */,
 				7941FD1520C96DA3004C95BE /* RootResponse.swift */,
 				7992853720CA904800CD6178 /* WikiaStats.swift */,
+				14C0C61020CD230C00D0D224 /* Language.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -365,6 +377,7 @@
 				7941FCB520C919CF004C95BE /* Resources */,
 				B23D999E41F58DDAF985602C /* [CP] Embed Pods Frameworks */,
 				7941FCF720C93CC8004C95BE /* SwiftLint */,
+				7E27A65850F9DABCFEA16BE0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -383,6 +396,8 @@
 				7941FCCA20C919D9004C95BE /* Sources */,
 				7941FCCB20C919D9004C95BE /* Frameworks */,
 				7941FCCC20C919D9004C95BE /* Resources */,
+				5769C3F4725B3E4A3834F92D /* [CP] Embed Pods Frameworks */,
+				BFF1074A6A766FFCFF1586BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -402,6 +417,8 @@
 				7941FCD520C919D9004C95BE /* Sources */,
 				7941FCD620C919D9004C95BE /* Frameworks */,
 				7941FCD720C919D9004C95BE /* Resources */,
+				3FE2343721D760B428FAC4B5 /* [CP] Embed Pods Frameworks */,
+				1BB1BFC4A29307BAE0082768 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -487,6 +504,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1BB1BFC4A29307BAE0082768 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FandomUITests/Pods-FandomUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FE2343721D760B428FAC4B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FandomUITests/Pods-FandomUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4F79AFA32AB84574164419E1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,6 +570,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5769C3F4725B3E4A3834F92D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FandomTests/Pods-FandomTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7941FCF720C93CC8004C95BE /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -536,6 +598,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nfi";
+		};
+		7E27A65850F9DABCFEA16BE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fandom/Pods-Fandom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		A4B3C608FADA3B5B3D13A0FE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -564,15 +641,32 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Fandom/Pods-Fandom-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fandom/Pods-Fandom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFF1074A6A766FFCFF1586BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FandomTests/Pods-FandomTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -583,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7941FD1820C978FA004C95BE /* CodingUserInfoKey.swift in Sources */,
+				14C0C61120CD230C00D0D224 /* Language.swift in Sources */,
 				799C550820CA77B00000A09B /* ImageService.swift in Sources */,
 				7941FCC320C919CF004C95BE /* Fandom.xcdatamodeld in Sources */,
 				7941FD0C20C94F3A004C95BE /* WikiaItem.swift in Sources */,
@@ -596,6 +691,7 @@
 				7941FD0920C94E3D004C95BE /* Service.swift in Sources */,
 				7941FCF220C925E3004C95BE /* WikiTableViewCell.swift in Sources */,
 				7992853A20CAAA6C00CD6178 /* Int+ToShortString.swift in Sources */,
+				14C0C61520CD2B1500D0D224 /* WikisTableViewController+Lang.swift in Sources */,
 				7941FCBB20C919CF004C95BE /* AppDelegate.swift in Sources */,
 				7941FD1420C966F0004C95BE /* WikiApiService.swift in Sources */,
 				14B9B35020C9AA0F009C3DC1 /* WikiStoreManager.swift in Sources */,
@@ -963,7 +1059,7 @@
 		};
 		7941FD1020C95DA5004C95BE /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 191E87482B4A9C3E76A08AC3 /* Pods-Fandom.debug.xcconfig */;
+			baseConfigurationReference = 2CBF4C61788E771B2B78B107 /* Pods-Fandom.test.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -983,7 +1079,7 @@
 		};
 		7941FD1120C95DA5004C95BE /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 341FA93E20B05D147F7B4B03 /* Pods-FandomTests.debug.xcconfig */;
+			baseConfigurationReference = 9A471FA3FE151DA40DFDF27C /* Pods-FandomTests.test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1005,7 +1101,7 @@
 		};
 		7941FD1220C95DA5004C95BE /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8821AA5F66B2CE2AE1868598 /* Pods-FandomUITests.debug.xcconfig */;
+			baseConfigurationReference = 986CAB62F18BFD23FDC0ECBD /* Pods-FandomUITests.test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

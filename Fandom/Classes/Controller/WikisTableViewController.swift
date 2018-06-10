@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DropDown
 
 class WikisTableViewController: UITableViewController {
     
@@ -14,7 +15,11 @@ class WikisTableViewController: UITableViewController {
     
     fileprivate let service = WikiService()
     fileprivate var wikiItems: [WikiaItem] = []
-    fileprivate var page = 0
+    var page = 0
+    let dropdown = DropDown()
+    var langButton: UIBarButtonItem!
+    var selectedLanguage: Language = .all
+    
     // Flag if there is a pending request
     fileprivate var isLoading = false
     // Flag if current items on display are already from cached data
@@ -24,6 +29,8 @@ class WikisTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.configureTitle()
+        self.configureLangButton()
+        
         tableView.register(UINib(nibName: "WikiTableViewCell", bundle: nil),
                            forCellReuseIdentifier: WikiTableViewCell.reuseIdentifier)
         service.delegate = self
@@ -47,15 +54,17 @@ class WikisTableViewController: UITableViewController {
         self.title = "Top Wikis"
     }
     
-    @objc private func refreshWikiItems(_ sender: Any) {
+    @objc func refreshWikiItems(_ sender: Any?) {
         // Fetch Weather Data
         page = 0
         getWikiItems()
     }
     
-    private func getWikiItems() {
+    // MARK: - Public
+    
+    func getWikiItems() {
         if !isLoading {
-            service.getTopWikis(page: page)
+            service.getTopWikis(page: page, language: selectedLanguage)
             refreshControl?.beginRefreshing()
             print("page \(page)")
             refreshControl?.beginRefreshing()
