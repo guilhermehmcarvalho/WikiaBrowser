@@ -9,39 +9,53 @@
 import UIKit
 import DropDown
 
-class WikisTableViewController: UITableViewController {
+class WikisTableViewController: UIViewController {
     
     // MARK: - Variables
     
-    fileprivate let service = WikiService()
-    fileprivate var wikiItems: [WikiaItem] = []
+    let service = WikiService()
+    var wikiItems: [WikiaItem] = []
     var page = 0
     let dropdown = DropDown()
     var langButton: UIBarButtonItem!
     var selectedLanguage: Language = .all
+    weak var tableView: UITableView!
     
     // Flag if there is a pending request
     fileprivate var isLoading = false
     // Flag if current items on display are already from cached data
     fileprivate var cached = false
+
+    var refreshControl: UIRefreshControl? {
+        get {return self.tableView.refreshControl }
+        set { tableView.refreshControl = newValue }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.configureTitle()
         self.configureLangButton()
+        self.configureTableView()
         
-        tableView.register(UINib(nibName: "WikiTableViewCell", bundle: nil),
-                           forCellReuseIdentifier: WikiTableViewCell.reuseIdentifier)
         service.delegate = self
-        
-        self.refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(refreshWikiItems(_:)), for: .valueChanged)
         
         getWikiItems()
     }
     
     // MARK: - private
+    
+    private func configureTableView() {
+        self.view = UITableView(frame: CGRect.zero, style: .plain)
+        self.tableView = self.view as? UITableView
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        self.tableView.register(UINib(nibName: "WikiTableViewCell", bundle: nil),
+                                forCellReuseIdentifier: WikiTableViewCell.reuseIdentifier)
+        self.refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refreshWikiItems(_:)), for: .valueChanged)
+    }
     
     private func configureTitle() {
         if let font = UIFont(name: "Rubik-Regular", size: 20) {
@@ -71,47 +85,6 @@ class WikisTableViewController: UITableViewController {
             isLoading = true
         }
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return wikiItems.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: WikiTableViewCell.reuseIdentifier,
-                                                       for: indexPath) as? WikiTableViewCell else {
-                fatalError("Unexpected Index Path")
-        }
-
-        cell.configureWith(wikiItems[indexPath.row])
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let wikia = wikiItems[indexPath.row]
-        if let wikiaLink = wikia.url, let url = URL(string: wikiaLink) {
-            UIApplication.shared.open(url)
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
-                            forRowAt indexPath: IndexPath) {
-        guard let isRefreshing = refreshControl?.isRefreshing else {
-            fatalError("No refresh control")
-        }
-        
-        if indexPath.row == wikiItems.count - 1 && !isRefreshing {
-            self.getWikiItems()
-        }
-    }
-    
 }
 
 // MARK: - WikiServiceDelegate

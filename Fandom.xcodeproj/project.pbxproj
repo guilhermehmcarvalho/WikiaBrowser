@@ -11,6 +11,7 @@
 		14B9B35220C9B1D8009C3DC1 /* ServiceFailureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9B35120C9B1D8009C3DC1 /* ServiceFailureType.swift */; };
 		14C0C61120CD230C00D0D224 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C61020CD230C00D0D224 /* Language.swift */; };
 		14C0C61520CD2B1500D0D224 /* WikisTableViewController+Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C61420CD2B1500D0D224 /* WikisTableViewController+Lang.swift */; };
+		14C0C61720CD40C500D0D224 /* WikisTableViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C61620CD40C500D0D224 /* WikisTableViewController+Table.swift */; };
 		14F1109120CBB59300E74C53 /* APIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109020CBB59300E74C53 /* APIServiceTest.swift */; };
 		14F1109320CBB5BE00E74C53 /* WikiAPIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */; };
 		14F1109420CBB9F200E74C53 /* Fandom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCC120C919CF004C95BE /* Fandom.xcdatamodeld */; };
@@ -66,6 +67,7 @@
 		14B9B35120C9B1D8009C3DC1 /* ServiceFailureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFailureType.swift; sourceTree = "<group>"; };
 		14C0C61020CD230C00D0D224 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		14C0C61420CD2B1500D0D224 /* WikisTableViewController+Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WikisTableViewController+Lang.swift"; sourceTree = "<group>"; };
+		14C0C61620CD40C500D0D224 /* WikisTableViewController+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WikisTableViewController+Table.swift"; sourceTree = "<group>"; };
 		14F1109020CBB59300E74C53 /* APIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTest.swift; sourceTree = "<group>"; };
 		14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPIServiceTest.swift; sourceTree = "<group>"; };
 		14F1109620CBBAA900E74C53 /* WikiStoreManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiStoreManagerTest.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			children = (
 				7941FCF520C93B81004C95BE /* WikisTableViewController.swift */,
 				14C0C61420CD2B1500D0D224 /* WikisTableViewController+Lang.swift */,
+				14C0C61620CD40C500D0D224 /* WikisTableViewController+Table.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -642,12 +645,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -678,6 +683,7 @@
 			files = (
 				7941FD1820C978FA004C95BE /* CodingUserInfoKey.swift in Sources */,
 				14C0C61120CD230C00D0D224 /* Language.swift in Sources */,
+				14C0C61720CD40C500D0D224 /* WikisTableViewController+Table.swift in Sources */,
 				799C550820CA77B00000A09B /* ImageService.swift in Sources */,
 				7941FCC320C919CF004C95BE /* Fandom.xcdatamodeld in Sources */,
 				7941FD0C20C94F3A004C95BE /* WikiaItem.swift in Sources */,
