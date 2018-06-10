@@ -39,6 +39,7 @@ extension WikisTableViewController: UITableViewDelegate, UITableViewDataSource {
         if let wikiaLink = wikia.url?.replacingOccurrences(of: "http://", with: "https://"),
             let url = URL(string: wikiaLink) {
             viewController.url = url
+            viewController.title = wikia.name
             navigationController?.pushViewController(viewController, animated: true)
         }
     }

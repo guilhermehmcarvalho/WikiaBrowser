@@ -14,10 +14,6 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     let webView = WKWebView()
     internal var url: URL?
     
-    var prefix: String {
-        return Bundle.main.apiBaseUrl()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

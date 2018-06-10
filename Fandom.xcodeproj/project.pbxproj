@@ -14,6 +14,7 @@
 		14C0C61720CD40C500D0D224 /* WikisTableViewController+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C61620CD40C500D0D224 /* WikisTableViewController+Table.swift */; };
 		14C0C62120CD755000D0D224 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C61F20CD755000D0D224 /* WebViewController.swift */; };
 		14C0C62220CD755000D0D224 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14C0C62020CD755000D0D224 /* WebViewController.xib */; };
+		14C0C62620CD85D400D0D224 /* UIFont+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C62520CD85D400D0D224 /* UIFont+App.swift */; };
 		14F1109120CBB59300E74C53 /* APIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109020CBB59300E74C53 /* APIServiceTest.swift */; };
 		14F1109320CBB5BE00E74C53 /* WikiAPIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */; };
 		14F1109420CBB9F200E74C53 /* Fandom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCC120C919CF004C95BE /* Fandom.xcdatamodeld */; };
@@ -72,6 +73,7 @@
 		14C0C61620CD40C500D0D224 /* WikisTableViewController+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WikisTableViewController+Table.swift"; sourceTree = "<group>"; };
 		14C0C61F20CD755000D0D224 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		14C0C62020CD755000D0D224 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		14C0C62520CD85D400D0D224 /* UIFont+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+App.swift"; sourceTree = "<group>"; };
 		14F1109020CBB59300E74C53 /* APIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTest.swift; sourceTree = "<group>"; };
 		14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPIServiceTest.swift; sourceTree = "<group>"; };
 		14F1109620CBBAA900E74C53 /* WikiStoreManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiStoreManagerTest.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				7941FD1720C978FA004C95BE /* CodingUserInfoKey.swift */,
 				7992853920CAAA6C00CD6178 /* Int+ToShortString.swift */,
 				7992853B20CAB1BE00CD6178 /* UIColor+App.swift */,
+				14C0C62520CD85D400D0D224 /* UIFont+App.swift */,
 			);
 			name = Extensions;
 			path = Helpers;
@@ -699,6 +702,7 @@
 				14C0C61120CD230C00D0D224 /* Language.swift in Sources */,
 				14C0C61720CD40C500D0D224 /* WikisTableViewController+Table.swift in Sources */,
 				799C550820CA77B00000A09B /* ImageService.swift in Sources */,
+				14C0C62620CD85D400D0D224 /* UIFont+App.swift in Sources */,
 				7941FCC320C919CF004C95BE /* Fandom.xcdatamodeld in Sources */,
 				7941FD0C20C94F3A004C95BE /* WikiaItem.swift in Sources */,
 				7941FD0720C94CCB004C95BE /* WikiService.swift in Sources */,

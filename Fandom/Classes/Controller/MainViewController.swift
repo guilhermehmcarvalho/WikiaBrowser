@@ -84,7 +84,8 @@ extension MainViewController: PagingViewControllerDelegate {
     // can access the title string by casting the paging item to a
     // PagingTitleItem, which is the PagingItem type used by
     // FixedPagingViewController.
-    func pagingViewController<T>(_ pagingViewController: PagingViewController<T>, widthForPagingItem pagingItem: T, isSelected: Bool) -> CGFloat? {
+    func pagingViewController<T>(_ pagingViewController: PagingViewController<T>,
+                                 widthForPagingItem pagingItem: T, isSelected: Bool) -> CGFloat? {
         guard let item = pagingItem as? FilterItem else { return 0 }
         
         let insets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)

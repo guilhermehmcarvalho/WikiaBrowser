@@ -19,7 +19,7 @@ class WikiService: Service<RootResponse> {
     
     // MARK: - Public
     
-    func getTopWikis(page: Int? = nil, limit: Int = 30, language:Language = .all) {
+    func getTopWikis(page: Int? = nil, limit: Int = 30, language: Language = .all) {
         apiService = WikiApiService().expand(1).batch(page).limit(limit).lang(language)
         apiService.get(failure: self.failure, success: self.success)
         if page == nil || page == 0 {

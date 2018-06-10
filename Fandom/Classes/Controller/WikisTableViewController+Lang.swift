@@ -27,11 +27,10 @@ extension WikisTableViewController {
             self.refreshWikiItems(nil)
         }
         
-        if let font = UIFont(name: "Rubik-Regular", size: 20) {
-            let atributes = [NSAttributedStringKey.font: font]
-            self.navigationController?.navigationBar.titleTextAttributes = atributes
-            dropdown.textFont = font.withSize(15)
-        }
+        let font = UIFont.App.rubikRegular(ofSize: 20)
+        let atributes = [NSAttributedStringKey.font: font]
+        self.navigationController?.navigationBar.titleTextAttributes = atributes
+        dropdown.textFont = font.withSize(15)
     }
     
     @objc private func langTapped(_ sender: Any) {

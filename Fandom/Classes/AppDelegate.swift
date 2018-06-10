@@ -26,15 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.App.darkGray
         UINavigationBar.appearance().tintColor = UIColor.white
         
-        if let titleFont = UIFont(name: "Rubik-Regular", size: 20) {
-            let atributes = [NSAttributedStringKey.font: titleFont]
-            UINavigationBar.appearance().titleTextAttributes = atributes
-        }
+        let titleFont = UIFont.App.rubikRegular(ofSize: 20)
+        let atributes = [NSAttributedStringKey.font: titleFont]
+        UINavigationBar.appearance().titleTextAttributes = atributes
         
-        if let font = UIFont(name: "Rubik-Regular", size: 18) {
-            let attributes = [NSAttributedStringKey.font: font]
-            UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal)
-        }
+        let font = UIFont.App.rubikRegular(ofSize: 18)
+        let attributes = [NSAttributedStringKey.font: font]
+        UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal)
     }
 
 	// MARK: - Core Data stack
