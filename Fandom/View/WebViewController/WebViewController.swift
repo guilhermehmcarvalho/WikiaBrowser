@@ -32,15 +32,39 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         self.view.addSubview(webView)
         self.view.addSubview(activityIndicator)
         
+        configWebView()
+        configBackButton()
+        configActivityIndicator()
+        
+        webView.load(NSURLRequest(url: url) as URLRequest)
+    }
+    
+    func configWebView() {
         webView.frame = view.frame
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         webView.allowsBackForwardNavigationGestures = false
         webView.navigationDelegate = self
-        webView.load(NSURLRequest(url: url) as URLRequest)
-        
+    }
+    
+    func configActivityIndicator() {
         activityIndicator.startAnimating()
         activityIndicator.color = UIColor.App.darkGray
         activityIndicator.hidesWhenStopped = true
+    }
+    
+    func configBackButton() {
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(customGoBack))
+        navigationItem.leftBarButtonItem = backButton
+        navigationItem.hidesBackButton = false
+    }
+    
+    @objc func customGoBack(sender: UIButton) {
+        if self.webView.canGoBack {
+            self.webView.goBack()
+            self.webView.reload()
+        } else {
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction,
@@ -56,15 +80,11 @@ class WebViewController: UIViewController, WKNavigationDelegate {
                 print(url)
                 print("Redirected to browser. No need to open it locally")
                 decisionHandler(.cancel)
-            } else {
-                print("Open it locally")
-                activityIndicator.startAnimating()
-                decisionHandler(.allow)
+                return
             }
-        } else {
-            print("not a user click")
-            decisionHandler(.allow)
         }
+        
+        decisionHandler(.allow)
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
