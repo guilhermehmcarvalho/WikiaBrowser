@@ -15,7 +15,7 @@ class WikiApiService: ApiService {
     
     fileprivate(set) var expand: Int?
     fileprivate(set) var hub: String?
-    fileprivate(set) var lang: String?
+    fileprivate(set) var lang: Language?
     fileprivate(set) var limit: Int?
     fileprivate(set) var batch: Int?
     
@@ -76,8 +76,8 @@ class WikiApiService: ApiService {
             params[APIParameterKey.expand] = expand
         }
         
-        if let lang = builder.lang {
-            params[APIParameterKey.lang] = lang
+        if let lang = builder.lang, lang != .all {
+            params[APIParameterKey.lang] = lang.languageCode
         }
         
         if let hub = builder.hub {
@@ -102,13 +102,13 @@ extension WikiApiService {
         return self
     }
     
-    func lang(_ value: String) -> Self {
-        builder.lang = lang
+    func lang(_ value: Language) -> Self {
+        builder.lang = value
         return self
     }
     
     func hub(_ value: String) -> Self {
-        builder.hub = hub
+        builder.hub = value
         return self
     }
     
