@@ -56,6 +56,7 @@ class WikisTableViewController: UIViewController {
                                 forCellReuseIdentifier: WikiTableViewCell.reuseIdentifier)
         self.refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refreshWikiItems(_:)), for: .valueChanged)
+        refreshControl?.tintColor = UIColor.App.darkGray
     }
     
     @objc func refreshWikiItems(_ sender: Any?) {
