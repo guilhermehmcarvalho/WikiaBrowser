@@ -9,7 +9,6 @@ target 'Fandom' do
   pod 'Alamofire', '~> 4.6.0'
   pod 'AlamofireImage', '~> 3.3'
   pod 'DropDown', '~> 2.3.2'
-  pod 'Parchment', '~> 1.3.0'
 
   target 'FandomTests' do
     inherit! :search_paths
