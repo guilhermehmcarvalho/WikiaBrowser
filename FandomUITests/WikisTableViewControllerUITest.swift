@@ -10,7 +10,9 @@ import XCTest
 @testable import Fandom
 
 class WikisTableViewControllerUITest: XCTestCase {
-        
+    
+    // MARK: - XCTestCase
+    
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
@@ -20,6 +22,8 @@ class WikisTableViewControllerUITest: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
+    
+    // MARK: - Tests
     
     func testClickRow() {
         let app = XCUIApplication()

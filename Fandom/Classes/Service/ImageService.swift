@@ -11,8 +11,8 @@ import Alamofire
 import AlamofireImage
 
 class ImageService {
-    // MARK: - Variables
     
+    // MARK: - Variables
     weak public var delegate: ImageServiceDelegate?
     
     // MARK: - Public

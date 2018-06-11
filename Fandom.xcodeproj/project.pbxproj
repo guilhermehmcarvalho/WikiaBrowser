@@ -15,6 +15,7 @@
 		14C0C62120CD755000D0D224 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C61F20CD755000D0D224 /* WebViewController.swift */; };
 		14C0C62220CD755000D0D224 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14C0C62020CD755000D0D224 /* WebViewController.xib */; };
 		14C0C62620CD85D400D0D224 /* UIFont+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C62520CD85D400D0D224 /* UIFont+App.swift */; };
+		14C0C62820CED40900D0D224 /* WebViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C0C62720CED40900D0D224 /* WebViewController+Navigation.swift */; };
 		14F1109120CBB59300E74C53 /* APIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109020CBB59300E74C53 /* APIServiceTest.swift */; };
 		14F1109320CBB5BE00E74C53 /* WikiAPIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */; };
 		14F1109420CBB9F200E74C53 /* Fandom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7941FCC120C919CF004C95BE /* Fandom.xcdatamodeld */; };
@@ -74,6 +75,7 @@
 		14C0C61F20CD755000D0D224 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		14C0C62020CD755000D0D224 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		14C0C62520CD85D400D0D224 /* UIFont+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+App.swift"; sourceTree = "<group>"; };
+		14C0C62720CED40900D0D224 /* WebViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebViewController+Navigation.swift"; sourceTree = "<group>"; };
 		14F1109020CBB59300E74C53 /* APIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTest.swift; sourceTree = "<group>"; };
 		14F1109220CBB5BE00E74C53 /* WikiAPIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPIServiceTest.swift; sourceTree = "<group>"; };
 		14F1109620CBBAA900E74C53 /* WikiStoreManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiStoreManagerTest.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				14C0C61F20CD755000D0D224 /* WebViewController.swift */,
 				14C0C62020CD755000D0D224 /* WebViewController.xib */,
+				14C0C62720CED40900D0D224 /* WebViewController+Navigation.swift */,
 			);
 			path = WebViewController;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				14C0C62620CD85D400D0D224 /* UIFont+App.swift in Sources */,
 				7941FCC320C919CF004C95BE /* Fandom.xcdatamodeld in Sources */,
 				7941FD0C20C94F3A004C95BE /* WikiaItem.swift in Sources */,
+				14C0C62820CED40900D0D224 /* WebViewController+Navigation.swift in Sources */,
 				7941FD0720C94CCB004C95BE /* WikiService.swift in Sources */,
 				7941FD1620C96DA3004C95BE /* RootResponse.swift in Sources */,
 				7992853C20CAB1BE00CD6178 /* UIColor+App.swift in Sources */,
@@ -827,7 +831,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQLTE359NY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Fandom/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -847,7 +851,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQLTE359NY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Fandom/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1014,7 +1018,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQLTE359NY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Fandom/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

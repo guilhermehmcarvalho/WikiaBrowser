@@ -9,7 +9,6 @@
 import Foundation
 
 extension Bundle {
-    
     // Get base URL according to building scheme
     func apiBaseUrl() -> String {
         return object(forInfoDictionaryKey: "ApiBaseUrl") as? String ?? ""

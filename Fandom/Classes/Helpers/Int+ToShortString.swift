@@ -9,6 +9,7 @@
 import Foundation
 
 extension Int {
+    // Returns the number in an abreviated string form
     func toShortString() -> String {
         var result = ""
         if self < 1000 {

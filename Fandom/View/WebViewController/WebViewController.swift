@@ -8,12 +8,16 @@
 
 import UIKit
 import WebKit
+import NotificationBannerSwift
 
-class WebViewController: UIViewController, WKNavigationDelegate {
+class WebViewController: UIViewController {
 
+    // MARK: - Variables
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var webView = WKWebView()
-    internal var url: URL?
+    internal var url: URL!
+    var connectionBanner: NotificationBanner?
     
     var prefix: String {
         guard let prefix = url?.absoluteString else {
@@ -22,10 +26,12 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         return prefix
     }
     
+    // MARK: - UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let url = self.url else {
+        guard self.url != nil else {
             fatalError("no URL was defined")
         }
         
@@ -37,22 +43,24 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         configActivityIndicator()
         
         webView.load(NSURLRequest(url: url) as URLRequest)
+        activityIndicator.startAnimating()
     }
     
-    func configWebView() {
+    // MARK: - Private
+    
+    private func configWebView() {
         webView.frame = view.frame
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         webView.allowsBackForwardNavigationGestures = false
         webView.navigationDelegate = self
     }
     
-    func configActivityIndicator() {
-        activityIndicator.startAnimating()
+    private func configActivityIndicator() {
         activityIndicator.color = UIColor.App.darkGray
         activityIndicator.hidesWhenStopped = true
     }
     
-    func configBackButton() {
+    private func configBackButton() {
         let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(customGoBack))
         navigationItem.leftBarButtonItem = backButton
         navigationItem.hidesBackButton = false
@@ -67,35 +75,21 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         }
     }
     
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction,
-                 decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        
-        // If the user clicks a link that doesn't belong to the selected wiki,
-        // we open it outside of the app
-        if navigationAction.navigationType == .linkActivated {
-            if let url = navigationAction.request.url,
-                let host = url.host, !host.hasPrefix(prefix),
-                UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url)
-                print(url)
-                print("Redirected to browser. No need to open it locally")
-                decisionHandler(.cancel)
-                return
-            }
-        }
-        
-        decisionHandler(.allow)
+    private func refreshPage() {
+        let refresh: URL! = self.webView.url ?? self.url
+        let request = NSURLRequest(url: refresh) as URLRequest
+        webView.load(request)
+        self.connectionBanner?.dismiss()
+        self.activityIndicator.startAnimating()
     }
     
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        activityIndicator.stopAnimating()
-    }
+    // MARK: - Public
     
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        activityIndicator.stopAnimating()
-    }
-    
-    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        activityIndicator.stopAnimating()
+    func showNoConnectionBanner() {
+        connectionBanner = NotificationBanner(title: "No internet connection",
+                                              subtitle: "Press to retry", style: .warning)
+        connectionBanner?.onTap = { self.refreshPage() }
+        connectionBanner?.autoDismiss = false
+        connectionBanner?.show(bannerPosition: .bottom)
     }
 }

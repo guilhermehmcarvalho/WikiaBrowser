@@ -75,7 +75,7 @@ class WikiStoreManagerTest: XCTestCase {
         saveNotificationCompleteHandler = completeHandler
     }
     
-    func flushData() {
+    private func flushData() {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: WikiaItem.entityName)
         do {
             let objs = try mockPersistantContainer.viewContext.fetch(fetchRequest)

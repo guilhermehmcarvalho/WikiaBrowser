@@ -20,7 +20,7 @@ class WikisTableViewController: UIViewController {
     let dropdown = DropDown()
     var langButton: UIBarButtonItem!
     var selectedLanguage: Language = .all
-    var connectionBanner:NotificationBanner?
+    var connectionBanner: NotificationBanner?
     weak var tableView: UITableView!
     
     // Flag if there is a pending request
