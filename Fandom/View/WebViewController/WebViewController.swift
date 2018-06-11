@@ -94,4 +94,8 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         activityIndicator.stopAnimating()
     }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        activityIndicator.stopAnimating()
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import Fandom
 
 class WikisTableViewControllerUITest: XCTestCase {
         
@@ -27,5 +28,4 @@ class WikisTableViewControllerUITest: XCTestCase {
         let cell = cellQuery.children(matching: .staticText).firstMatch
         XCTAssertFalse(cell.exists, "Found element, so app didn't open safari")
     }
-    
 }

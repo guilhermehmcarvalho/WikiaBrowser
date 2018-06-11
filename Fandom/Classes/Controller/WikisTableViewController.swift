@@ -8,6 +8,7 @@
 
 import UIKit
 import DropDown
+import NotificationBannerSwift
 
 class WikisTableViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class WikisTableViewController: UIViewController {
     let dropdown = DropDown()
     var langButton: UIBarButtonItem!
     var selectedLanguage: Language = .all
+    var connectionBanner:NotificationBanner?
     weak var tableView: UITableView!
     
     // Flag if there is a pending request
@@ -51,6 +53,7 @@ class WikisTableViewController: UIViewController {
         self.tableView = self.view as? UITableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.backgroundColor = UIColor.App.lightGray
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.tableView.register(UINib(nibName: "WikiTableViewCell", bundle: nil),
                                 forCellReuseIdentifier: WikiTableViewCell.reuseIdentifier)
@@ -74,7 +77,18 @@ class WikisTableViewController: UIViewController {
             print("page \(page)")
             refreshControl?.beginRefreshing()
             isLoading = true
+            connectionBanner?.dismiss()
         }
+    }
+    
+    func showNoConnectionBanner() {
+        connectionBanner = NotificationBanner(title: "No internet connection",
+                                              subtitle: "Press to retry", style: .warning)
+        connectionBanner?.onTap = {
+            self.getWikiItems()
+        }
+        connectionBanner?.autoDismiss = false
+        connectionBanner?.show(bannerPosition: .bottom)
     }
 }
 
@@ -94,6 +108,7 @@ extension WikisTableViewController: WikiServiceDelegate {
         cached = false
         refreshControl?.endRefreshing()
         self.tableView.reloadData()
+        connectionBanner?.dismiss()
     }
     
     func requestDidComplete(cachedItems: [WikiaItem], failure: ServiceFailureType) {
@@ -105,5 +120,7 @@ extension WikisTableViewController: WikiServiceDelegate {
         refreshControl?.endRefreshing()
         isLoading = false
         cached = true
+        
+        showNoConnectionBanner()
     }
 }
